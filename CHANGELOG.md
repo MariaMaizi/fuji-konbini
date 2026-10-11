@@ -1,33 +1,40 @@
-# Changelog
+# 更新日志
 
-## Initial upload synchronization — 2026-10-11
+**简体中文** · [English](CHANGELOG.en.md)
 
-- Included the 48 Instant Meals product images added during review (285 approved supplied images total).
-- Synchronized the current clerk card layout and cache versions from the working application.
-- Preserved the approved Chinese homepage, English edition and 30 original orthographic reference sheets.
-- No API credentials or private configuration copied.
+## 更新日志中英双语版 — 2026-10-11
 
-## Bilingual portfolio presentation — 2026-10-10
+- 将更新日志默认设为中文，英文版保留在 `CHANGELOG.en.md`。
+- 两版顶部互相链接，并在英文项目首页增加英文更新日志入口。
 
-- Made the detailed Chinese project introduction the default README, with an English link at the top.
-- Preserved the accepted English content in README.en.md; removed the unwanted interior collage.
-- Expanded the Chinese running and reading guide, with explicit design decisions, AI collaboration and implementation limits.
-- Kept the product orthographic gallery; this editorial step made no runtime changes.
+## 首次上传前同步 — 2026-10-11
 
-## Review addition — 2026-10-10
+- 纳入审阅期间新增的 48 张 Instant Meals（速食）商品图片，已接入的认可商品图片共 285 张。
+- 从当前网页工程同步店员推荐卡片布局及缓存版本。
+- 保留已认可的中文首页、英文说明，以及 30 张产品正交参考原图。
+- 未复制 API 密钥或私有配置。
 
-- Added 30 unchanged product orthographic / multiview reference sheets in seven categorized galleries, at the owner's request.
-- Linked the gallery from the English project homepage and Chinese introduction.
-- Preserved original image bytes and recorded source names, dimensions and checksums. Runtime code, models, catalog and product-card artwork were not changed.
-- Prepared for owner review before the initial upload.
+## 作品介绍中英双语整理 — 2026-10-10
 
-## Initial review snapshot — 2026-10-10
+- 将详细的中文项目介绍设为默认 README，并在顶部提供 English 入口。
+- 在 `README.en.md` 中保留已认可的英文内容，移除不需要的店内截图拼图。
+- 扩充中文运行与阅读指南，说明设计取舍、AI 辅助范围及当前实现的限制。
+- 保留产品正交图画廊；本次文档整理未修改网页运行功能。
 
-- Collected the current runtime scene, 603-entry catalog and clerk application.
-- Preserved current single-product Add controls and the 100 chilled-food images.
-- Organized the runnable snapshot into web, server, scripts and docs.
-- Added an empty configuration example and offline checks.
-- Excluded private credentials, runtime logs, historical exports and editable Blender archives.
-- Refreshed the catalog regression's image-count assertion from 137 to 237 to include the already integrated chilled-food images.
+## 审阅资料补充 — 2026-10-10
 
-This initial snapshot preserves the current project without reconstructing or backdating development history. The repository is separate from website deployment.
+- 按创作者要求，新增 30 张产品正交／多视图参考原图，整理为 7 个分类画廊。
+- 在英文项目首页和中文介绍中加入画廊入口。
+- 保留原始图片文件，并记录来源文件名、尺寸和校验值；未修改运行代码、模型、商品目录或商品卡片图片。
+- 整理完成后供创作者审阅，再进行首次上传。
+
+## 首次审阅快照 — 2026-10-10
+
+- 收集当前可运行的场景、603 条商品目录及店员互动程序。
+- 保留当前的单品 Add 加购按钮，以及 100 张冷食商品图片。
+- 将可运行项目整理为 `web`、`server`、`scripts` 和 `docs` 等目录。
+- 添加不含密钥的配置示例，以及离线检查工具。
+- 排除私有凭证、运行日志、历史导出文件及可编辑的 Blender 原工程备份。
+- 将商品目录回归检查中的图片数量断言从 137 更新为 237，以包含此前已接入的冷食商品图片。
+
+这份首次快照保留了当时的项目状态，没有重建或倒填过去的开发历史。上传仓库与部署在线网页是两项独立操作。

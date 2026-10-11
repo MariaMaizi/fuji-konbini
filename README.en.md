@@ -83,3 +83,5 @@ Editable Blender source files and historical modeling exports remain in the loca
 ## Credits
 
 Built using Three.js, Blender and AI-assisted design/development workflows. Third-party marks and packaging remain the property of their respective owners. See [asset and dependency notes](docs/asset-notes.md). No blanket license is granted for the collected artwork or brand assets.
+
+[Changelog](CHANGELOG.en.md)

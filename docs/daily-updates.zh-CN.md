@@ -24,6 +24,8 @@ Blender `.blend` 原工程、旧 GLB、其余参考图总包、临时渲染、�
 
 仓库首页显示 `README.md` 的中文介绍，顶部 English 链接进入 `README.en.md`。两种语言分别维护，修改其中一份不会自动翻译另一份。
 
+更新日志也提供两版：[中文更新日志](../CHANGELOG.md)与[English changelog](../CHANGELOG.en.md)。记录新进展时，请同步更新这两个文件；顶部链接可以切换语言。
+
 在 GitHub 网页上修改介绍：打开对应文件 → 点击铅笔图标 → 修改内容 → Preview 检查 → Commit changes，填写本次修改说明后提交。之后在本地继续工作前，先拉取这些线上修改，避免版本分叉。
 
 ## 日常提交流程

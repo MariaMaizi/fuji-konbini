@@ -1,0 +1,32 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict'),slim=require('./food-slim.cjs'),policy=require('./clerk-policy.cjs');
+const catalog=policy.pricedCatalog(require('../web/data/product-catalog.json'));
+const input=message=>({message,history:[],language:'zh',state:{context:'rain',size:'light'}});
+const reply=(changes=[],productIds=[],message='请确认您的要求。')=>({changes,productIds,message,intent:'recommend',claims:[]});
+test('currency remains unresolved; preference then cancellation preserves budget and goal',()=>{
+ let m=slim.blankMemory();
+ for(const [text,changes]of [['20元以内低糖饮料',[{field:'budget',value:{amount:20,currency:'JPY'},evidence:'20元以内'},{field:'goals',value:['sugar_control'],evidence:'低糖'},{field:'slots',value:['drink'],evidence:'饮料'}]],['最好是咖啡',[{field:'preferredCategories',value:['coffee'],evidence:'咖啡'}]],['别推荐咖啡了其他不变',[{field:'preferredCategories',value:[],evidence:'别推荐咖啡'},{field:'avoid',value:['coffee'],evidence:'别推荐咖啡'}]]]){const u=slim.update(reply(changes),input(text),m);assert.deepEqual(u.issues,[]);m=u.memory;}
+ assert.deepEqual(m.requirements.budget,{amount:20,currency:'UNKNOWN'});assert.deepEqual(m.requirements.goals,['sugar_control']);assert.deepEqual(m.requirements.slots,['drink']);assert.deepEqual(m.requirements.preferredCategories,[]);assert.deepEqual(m.requirements.avoid,['coffee']);
+});
+test('positive coffee cannot become exclusion',()=>assert.equal(slim.update(reply([{field:'avoid',value:['coffee'],evidence:'咖啡'}]),input('最好咖啡'),slim.blankMemory()).issues.length,1));
+test('low sugar cannot acquire invented numeric threshold',()=>assert.equal(slim.update(reply([{field:'nutritionLimits',value:{sugar_g:{max:10}},evidence:'低糖'}]),input('低糖'),slim.blankMemory()).issues.length,1));
+test('unsupported numbers and stale quotes rejected without dropping old budget',()=>{const m=slim.blankMemory();m.requirements.budget={amount:350,currency:'JPY'};const u=slim.update(reply([{field:'budget',value:{amount:600,currency:'JPY'},evidence:'350日元'}]),input('只换饮料'),m);assert.equal(u.issues.length,1);assert.equal(u.memory.requirements.budget.amount,350);});
+test('unknown real SKU rejected',()=>assert.equal(slim.guard(reply([],['fake']),input('推荐'),catalog,slim.blankMemory()).issues[0].code,'unknown_product'));
+test('budget uses actual catalog sum',()=>{const m=slim.blankMemory();m.requirements.budget={amount:1,currency:'JPY'};assert(slim.guard(reply([],['drinks:WATER'],'饮用水'),input('推荐'),catalog,m).issues.some(i=>i.code==='budget_exceeded'));});
+test('hot drinks cannot be tofu',()=>{const m=slim.blankMemory();m.requirements.slots=['drink'];m.requirements.temperature='hot';assert(slim.guard(reply([],['oden:atsuage'],'厚揚炸豆腐'),input('喝热的'),catalog,m).issues.some(i=>i.code==='role_mismatch'));});
+test('quoted conflicting calories remain valid prose, not nutrient fact',()=>{assert.deepEqual(slim.guard(reply([],[],'至少500千卡但最多300千卡有冲突，请确认。'),input('至少500千卡但最多300千卡'),catalog,slim.blankMemory()).issues,[]);});
+test('unknown product nutrition assertion rejected through factual claim',()=>{const raw=reply([],[],'这款有300千卡。');raw.claims=[{id:'drinks:WATER',field:'kcal',value:300}];assert.equal(slim.guard(raw,input('热量'),catalog,slim.blankMemory()).issues[0].code,'unsupported_claim');});
+test('allergy consultation allowed but edible recommendations fail without verified labels',()=>{const m=slim.blankMemory();m.requirements.allergies=['egg'];const raw=reply([],[],'包装配料未核实，无法确认适合食用。');raw.intent='details';assert.deepEqual(slim.guard(raw,input('配料'),catalog,m).issues,[]);raw.intent='recommend';raw.productIds=['drinks:WATER'];assert(slim.guard(raw,input('推荐'),catalog,m).issues.some(i=>i.code==='allergy_unverified'));});
+test('orchestrator uses one call, preserves natural text without rewriting',async()=>{let n=0;const result=await slim.orchestrate({input:input('这里有原料大米吗'),catalog,memory:slim.blankMemory(),call:async()=>{n++;return {...reply([],[],'当前目录没有收录原料大米，无法确认这里有售。'),intent:'availability'};}});assert.equal(n,1);assert.equal(result.message,'当前目录没有收录原料大米，无法确认这里有售。');});
+test('null unknown metadata is not a fabricated claim',()=>{const raw=reply();raw.claims=[{id:'drinks:WATER',field:'temperature',value:null}];assert.deepEqual(slim.guard(raw,input('温度'),catalog,slim.blankMemory()).issues,[]);});
+test('free text intent cannot bypass the budget guard',()=>{const m=slim.blankMemory();m.requirements.budget={amount:1,currency:'JPY'};const raw=reply([],['drinks:WATER']);raw.intent='recommendation';assert(slim.guard(raw,input('推荐'),catalog,m).issues.some(i=>i.code==='budget_exceeded'));});
+test('stale evidence for unchanged budget ignored; new changes still need latest evidence',()=>{const m=slim.blankMemory();m.requirements.budget={amount:500,currency:'JPY'};const u=slim.update(reply([{field:'budget',value:{amount:500,currency:'JPY'},evidence:'预算500日元'}]),input('换饮料'),m);assert.deepEqual(u.issues,[]);});
+test('catalog absence does not establish no sales',()=>assert(slim.guard(reply([],[],'这里不售卖此类商品。'),input('有吗'),catalog,slim.blankMemory()).issues.some(i=>i.code==='unsupported_stock_statement')));
+test('production HTTP slim adapter keeps independent sessions and one call per request',async()=>{
+ const server=require('./clerk-server.cjs');let calls=0;
+ const app=server.createServer({foodAgent:'slim',getConfig:()=>({provider:'bailian',model:'qwen-flash-2025-07-28',key:'mock'}),logger:()=>{},fetchImpl:async(u,o)=>{
+  calls++;const messages=JSON.parse(o.body).messages;assert(!messages[0].content.includes('ALREADY VALIDATED OPTIONS'));const raw={...reply([{field:'budget',value:{amount:500,currency:'JPY'},evidence:'500日元'}],[],'当前目录未收录原料大米，无法确认有售。'),intent:'availability'};
+  return {ok:true,status:200,json:async()=>({choices:[{finish_reason:'stop',message:{content:JSON.stringify(raw)}}],usage:{total_tokens:10}})};
+ }});await new Promise(r=>app.listen(0,'127.0.0.1',r));
+ try{const base='http://127.0.0.1:'+app.address().port;const send=()=>fetch(base+'/api/clerk',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:'500日元，这里有原料大米吗',language:'zh'})}).then(r=>r.json());const a=await send(),b=await send();assert.equal(calls,2);assert.notEqual(a.sessionId,b.sessionId);assert.equal(a.foodEvaluation.variant,'slim');assert.equal(a.diagnostics.upstreamCalls,1);assert.equal(a.foodEvaluation.requirements.budget.amount,500);assert.equal(a.message,'当前目录未收录原料大米，无法确认有售。');}finally{await new Promise(r=>app.close(r));}
+});

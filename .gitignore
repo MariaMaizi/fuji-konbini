@@ -1,0 +1,26 @@
+# Local credentials, including provider-specific files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Dependencies, cache and runtime output
+node_modules/
+work/
+logs/
+coverage/
+*.log
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Editable modeling archives remain in the original local workspace
+*.blend
+*.blend1
+*.blend2
+*.zip
+*.7z
+*.bak
+local-only/

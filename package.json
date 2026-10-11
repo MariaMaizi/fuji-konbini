@@ -1,0 +1,14 @@
+{
+  "name": "fuji-konbini",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An interactive 3D convenience store at the foot of Mount Fuji.",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node server/clerk-server.cjs",
+    "test": "node scripts/test.cjs",
+    "check": "node scripts/check-assets.cjs"
+  }
+}

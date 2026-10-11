@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b7cbea">
+  <link rel="icon" href="data:,">
+  <title>Fuji Konbini — 3D Miniature</title>
+  <link rel="stylesheet" href="style.css?v=20260916-final">
+  <link rel="stylesheet" href="src/clerk-ui.css?v=67.1">
+</head>
+<body>
+  <main id="app" aria-label="富士山下的便利店三维微缩场景">
+    <canvas id="scene" aria-label="可旋转、缩放的富士山与便利店三维模型"></canvas>
+
+    <header class="masthead" aria-label="作品标题">
+      <div class="mark" aria-hidden="true"><span>富</span></div>
+      <div>
+        <p class="title">FUJI KONBINI</p>
+        <p class="subtitle">富士山麓 · ミニチュア景</p>
+      </div>
+    </header>
+
+    <section class="weather" aria-label="环境状态">
+      <p class="weather-label">今日の空</p>
+      <div class="weather-options" role="group" aria-label="切换天气">
+        <button class="weather-button is-active" data-weather="sunny" aria-pressed="true">
+          <span class="weather-symbol sun" aria-hidden="true"></span><span>晴天</span>
+        </button>
+        <button class="weather-button" data-weather="rain" aria-pressed="false">
+          <span class="weather-symbol rain" aria-hidden="true"></span><span>雨天</span>
+        </button>
+        <button class="weather-button" data-weather="night" aria-pressed="false">
+          <span class="weather-symbol moon" aria-hidden="true"></span><span>夜景</span>
+        </button>
+      </div>
+    </section>
+
+    <aside id="object-label" class="object-label" aria-live="polite"></aside>
+
+    <div class="scene-note" aria-hidden="true">
+      <span class="rule"></span>
+      <span>WINTER AFTERNOON<br>SHIZUOKA, JAPAN</span>
+    </div>
+
+    <div class="explore-bar" aria-label="场景浏览模式">
+      <span id="mode-status">室外环绕</span>
+      <button id="exterior-mode">室外环绕</button>
+      <button id="walk-outside">街景漫步</button>
+      <button id="enter-store" class="primary">进入便利店</button>
+      <button id="exit-store">走出便利店</button>
+      <button id="look-around">点击锁定鼠标</button>
+    </div>
+    <div class="walk-pad" aria-label="步行方向"><button data-move="KeyW" aria-label="前进">↑</button><button data-move="KeyA" aria-label="左移">←</button><button data-move="KeyS" aria-label="后退">↓</button><button data-move="KeyD" aria-label="右移">→</button></div>
+    <div class="controls-hint">
+      <p id="navigation-hint">拖动 360° 环绕 · 滚轮缩放</p>
+      <button id="reset-view" class="reset-button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.9 5.6A9 9 0 1 1 3 12h2a7 7 0 1 0 2-4.9L10 10H3V3l1.9 2.6Z"/></svg>
+        恢复视角
+      </button>
+    </div>
+
+    <div id="loading" class="loading" role="status" aria-live="polite">
+      <div class="loading-mountain" aria-hidden="true"><span></span></div>
+      <p>正在摆放微缩街景</p>
+      <div class="loading-track"><span></span></div>
+    </div>
+  </main>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/OrbitControls.js"></script>
+  <script src="vendor/GLTFLoader.js"></script>
+  <script src="vendor/BufferGeometryUtils.js"></script>
+  <script src="src/model-kit.js?v=20260916-final"></script>
+  <script src="src/store.js?v=20260916-final"></script>
+  <script src="src/world-detail.js?v=20260916-final"></script>
+  <script src="src/navigation.js?v=24.2"></script>
+  <link rel="stylesheet" href="src/characters.css?v=24.2">
+  <script src="src/characters.js?v=24.4"></script>
+  <script src="src/coffee-station.js?v=service-v14"></script>
+  <script src="src/fried-station.js?v=fried-v12"></script>
+  <script src="src/oden-station.js?v=service-v16"></script>
+  <script src="src/snacks-station.js?v=snacks-v16"></script>
+  <script src="src/icecream-station.js?v=icecream-v17.2"></script>
+  <script src="src/chilled-station.js?v=chilled-v18.4"></script>
+  <script src="src/daily-station.js?v=daily-v19.2"></script>
+  <script src="src/pantry-station.js?v=pantry-v20.2"></script>
+  <script src="src/sweets-station.js?v=sweets-v21.1"></script>
+  <script src="src/ambience-station.js?v=27.1"></script>
+  <script src="src/blender-scene.js?v=ambience-v22.1"></script>
+  <script src="src/product-catalog.js?v=66.1"></script>
+  <script src="src/clerk-engine.js?v=31.1"></script>
+  <script src="src/catalog-panel.js?v=63.1"></script>
+  <script src="src/clerk-api.js?v=54.1"></script>
+  <script src="src/clerk-ui.js?v=63.1"></script>
+  <script src="app.js?v=characters-24.2"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

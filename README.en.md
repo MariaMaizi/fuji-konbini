@@ -1,6 +1,8 @@
 # Fuji Konbini
 
-**Turn “what should I have today?” into a 3D shopping journey you can explore.**
+**A conversational product-discovery prototype connecting AI recommendations with 3D shopping interaction.**
+
+Fuji Konbini connects natural-language consultation, **603 catalog entries and 518 virtual food records** to a Three.js store: ask, inspect a product, find its shelf and add it to a basket. It explores how generative AI can support a concrete selection task.
 
 [简体中文](README.md) · **English**
 
@@ -12,13 +14,15 @@
 
 **603 catalog entries with 3D mappings** · **518 virtual food records** · **Chinese / Japanese / English conversation**
 
-## Product Problem / Why I Built It
+## Product Problem / Product Goal
 
-Visitors may know they want something warm or a small bite, without knowing which product to choose. A text recommendation still leaves them to find it.
+Visitors often start with a situation or preference—breakfast before departure, a small bite or a limited budget—rather than a product category. Text advice still leaves them to identify the item, locate it and decide what to do next.
 
-My product question: **can conversational advice become a visible product and a clear next action?** Mount Fuji provides a setting for breakfast, an afternoon pause or shelter from rain.
+The prototype serves **situational selection and store exploration** through two connected paths: search/browse for visitors with a clear target, and clerk conversation for visitors who need suggestions. Product cards, Find and Basket provide the next actions in both paths.
 
-I defined the experience, organized product information and guided feature decisions, using GPT / Codex for artwork and implementation support. This is a working personal prototype; formal user research and measured usability outcomes are future work.
+**Product hypothesis:** connecting advice to inspectable products and spatial actions can reduce the handoffs between understanding a suggestion, finding it and choosing it. The interaction is implemented; efficiency gains have not been validated through formal user research or quantitative experiments.
+
+**My contribution:** experience and scope definition, product-data organization and scene mapping, interface iteration, and an architecture audit to clarify AI boundaries and priorities. GPT / Codex supported artwork and implementation. This is a personal product-design and development project.
 
 ## Core Experience
 
@@ -46,15 +50,20 @@ flowchart LR
 
 The **direct architecture** sends the compact full catalog, recent history and question in one model request. The LLM writes and selects IDs; code removes invalid/duplicate card IDs and maps products to the scene. User clicks trigger actions.
 
-## AI Product Decisions
+## AI Product Design / Mechanisms and Decisions
 
-| Decision | Implementation and trade-off |
+The current design uses the LLM to generate suggestions and application code to connect products with actions, with explicit boundaries around data, context and execution.
+
+| Mechanism | Current implementation and trade-off |
 | --- | --- |
-| **Catalog grounding** | Shared IDs connect cards and 3D objects. Card identity is checked; prose facts need stronger validation. |
-| **Explicit data provenance** | Food data is project-designed; prices are analog references or estimates, not verified package facts. |
-| **Language/action boundary** | The LLM interprets and recommends; code maps IDs and executes navigation and Basket. Arithmetic remains with the model. |
-| **Short context** | Last **eight messages**, cleared on refresh. Persistent requirements are a next step. |
-| **Human-in-the-loop** | Visitors choose Find / Add. Suggestions do not become purchases automatically; failed requests do not substitute products. |
+| **Grounding and identity** | Full-catalog input and shared IDs connect up to three cards to catalog names, artwork and 3D objects. Invalid/duplicate IDs are removed; prose facts are not thereby verified. |
+| **Data provenance** | Scene identities and locations are distinct from virtual food labels. Nutrition, portions and ingredients include project settings; prices are references or estimates, not verified package facts. |
+| **Short-term context** | The last **eight messages** accompany the latest question. Browser-memory history resets on refresh; earlier requirements can leave the window. Persistent requirements are planned. |
+| **Language versus deterministic execution** | The LLM interprets, selects and explains. Code handles transport, mapping, navigation and Basket. Budget/nutrition arithmetic and constraint compliance remain with the model. |
+| **Human-in-the-loop** | Visitors inspect cards and trigger Find / Add themselves. Suggestions do not automatically become orders, and failures do not silently substitute products. |
+| **Failure feedback and observability** | Request IDs, timing, model metadata and error diagnostics support investigation and retry feedback. They are not an automated recommendation-quality evaluation system. |
+
+The response contract separates `message` from `productIds`. Evaluation must likewise distinguish **request success, constraint satisfaction, prose-to-card consistency and task completion**. A successful API response alone does not establish a correct recommendation.
 
 ## Current Limitations
 
@@ -62,11 +71,26 @@ Direct mode has limited memory, no active deterministic ranking and no comprehen
 
 ## Next Iteration / Roadmap
 
-1. **Requirements:** retain goals, budgets and exclusions; test corrections and swaps across turns.
-2. **Verification:** audit food data; add deterministic arithmetic and explainable filtering/ranking. Evaluate constraint and card consistency.
-3. **Evaluation:** build multilingual task sets, test smaller inputs and waiting feedback, then measure completion, errors and latency with users.
+1. **Requirement management:** retain goals, budgets, exclusions and update sources; distinguish additions from corrections and test multi-turn updates.
+2. **Recommendation trust:** audit virtual food data, include missing input fields, and add deterministic arithmetic and explainable filtering/ranking. Check numbers, constraints and card consistency.
+3. **Evaluation and interaction:** build multilingual task sets, compare smaller inputs and waiting feedback, then measure quality, task completion, errors and latency with users.
 
 These are planned capabilities, not claims about the current implementation.
+
+<details>
+<summary><strong>Evaluation design: what the next iteration should establish</strong></summary>
+
+This proposed framework has no formal results or achieved KPIs yet. Offline fixtures, live-model evaluation and usability sessions will be reported separately.
+
+| Dimension | Proposed checks |
+| --- | --- |
+| Task completion | Can visitors select a product, reach its shelf and add it to Basket? |
+| Constraint compliance | Are budgets, exclusions and explicit requirements satisfied and retained across turns? |
+| Factual/interface consistency | Do product names, amounts and nutrition values match the catalog and displayed cards? |
+| Interaction reliability | Time to actionable cards, error types, and Find failures or interruptions |
+| Language consistency | Equivalent Chinese / Japanese / English tasks: interpretation, product mapping and completion |
+
+</details>
 
 ## Tech Stack
 

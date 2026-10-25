@@ -24,7 +24,7 @@ I defined the experience, organized product information and guided feature decis
 
 1. **Ask or browse.** Talk to a 2D clerk, or search and filter the catalog in Browse.
 2. **Inspect a suggestion.** Valid recommended IDs become up to three product cards with catalog names, available artwork and actions.
-3. **Find it in the store.** Click **Find** to mark the product and follow an **A* route** through the Three.js scene.
+3. **Find it in the store.** Click **Find** to mark the product and follow an **A\* route** through the Three.js scene.
 4. **Make the choice.** Use **Add** or **Add pairing**, adjust quantities in Basket and export a virtual receipt.
 
 ![Product selection with artwork, Find and Add](docs/images/product-browser.png)

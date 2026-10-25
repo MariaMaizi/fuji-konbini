@@ -1,0 +1,16 @@
+{
+  "auditDate": "2026-10-25",
+  "canonicalAudit": "docs/ai-pm/architecture-audit.md in original modeling workspace",
+  "canonicalAuditSHA256": "20d1339bf0d9e82163e68307f68e0c80add907891f139af5dcadf63a54c25168",
+  "publishedAuditSHA256": "78465676e48b42e82dd7b9f3cac7e67f65d5988a192e0384ed1360c024c1dd92",
+  "changes": [
+    "Added publication/snapshot scope note",
+    "Converted local absolute code links to repository-relative module links; omitted source-line anchors for GitHub Markdown portability",
+    "Added local-only generator and launcher context",
+    "Omitted unrelated computer shutdown note; adjusted historical artifact location note",
+    "Normalized Markdown trailing whitespace"
+  ],
+  "localGeneratorSHA256": "b3ccc60498d8eb783259e749542e0bb4f1da6f98e05032f0d26e493073ac8f3c",
+  "runtimeCodeChanged": false,
+  "realModelCalls": 0
+}

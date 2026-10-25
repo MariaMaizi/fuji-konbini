@@ -1,87 +1,91 @@
 # Fuji Konbini
 
-**A small store, a pause in your day.**
+**Turn “what should I have today?” into a 3D shopping journey you can explore.**
 
-An interactive 3D convenience store at the foot of Mount Fuji. Walk inside, browse the shelves, and talk with a virtual clerk about what you feel like having today.
+[简体中文](README.md) · **English**
 
-This is a personal design and development project in progress, combining a modeled environment, a searchable product catalog, and an experimental conversational shopping experience.
+[Try locally](#try-locally) · [Experience](#core-experience) · [Architecture audit](docs/ai-pm/architecture-audit.md) · [Design references](design/product-orthographics/README.md)
 
-[简体中文](README.md) · **English** · [Product orthographic gallery](design/product-orthographics/README.md) · [Architecture](docs/architecture.md) · [Current status](docs/project-status.md)
+![Fuji Konbini prototype: the 3D convenience store below Mount Fuji](docs/images/fuji-konbini-hero.jpg)
 
-## Product design references
+*A locally runnable AI product prototype. Screenshot shows the prototype scene. A public demo is not deployed.*
 
-Explore **30 original product orthographic / multiview sheets** created with GPT and supplied during the modeling process: packaging studies for chilled food, ice cream, snacks, sweets, pantry goods, daily essentials and checkout products.
+**603 catalog entries with 3D mappings** · **518 virtual food records** · **Chinese / Japanese / English conversation**
 
-[**Browse the original reference gallery →**](design/product-orthographics/README.md)
+## Product Problem / Why I Built It
 
-![Ice cream product reference sheet](design/product-orthographics/icecream/haagen-dazs-classics.png)
+Visitors may know they want something warm or a small bite, without knowing which product to choose. A text recommendation still leaves them to find it.
 
-The reference gallery preserves earlier design ideas as well as references used for modeling. The actual modeled inventory is documented separately in the catalog.
+My product question: **can conversational advice become a visible product and a clear next action?** Mount Fuji provides a setting for breakfast, an afternoon pause or shelter from rain.
 
-## What you can explore
+I defined the experience, organized product information and guided feature decisions, using GPT / Codex for artwork and implementation support. This is a working personal prototype; formal user research and measured usability outcomes are future work.
 
-- A 3D street and convenience store, with weather and time-of-day controls.
-- Third-person exploration with two customer styles, plus a first-person view.
-- A searchable catalog of **603 entries**: 600 modeled product entries and 3 coffee services.
-- Product cards, individual and pairing add-to-basket actions, and in-store wayfinding.
-- A cream-and-green clerk panel with English controls and Chinese, Japanese and English conversation support. Japanese signage and packaging remain part of the scene.
-- A server-side model connection. The prepared configuration uses Bailian in direct-response mode; users supply their own key locally.
+## Core Experience
 
-![Current product browser](docs/images/product-browser.png)
+1. **Ask or browse.** Talk to a 2D clerk, or search and filter the catalog in Browse.
+2. **Inspect a suggestion.** Valid recommended IDs become up to three product cards with catalog names, available artwork and actions.
+3. **Find it in the store.** Click **Find** to mark the product and follow an **A* route** through the Three.js scene.
+4. **Make the choice.** Use **Add** or **Add pairing**, adjust quantities in Basket and export a virtual receipt.
 
-## Run locally
+![Product selection with artwork, Find and Add](docs/images/product-browser.png)
 
-Install Node.js 22 or later; this snapshot was checked with Node.js 24. The server uses Node built-ins and the browser libraries are included, so no dependency installation is needed.
+Explore in first or third person with two customer styles and a 3D cashier. The catalog includes 600 modeled product entries and three coffee services. Clerk controls are English, with Japanese signage and some Chinese scene controls. No payments or real orders.
+
+## How It Works
+
+```mermaid
+flowchart LR
+    U[Message and recent history] --> N[Node.js backend]
+    D[603 catalog entries and prices<br/>518 virtual food records] --> N
+    N --> L[Bailian qwen3.6-plus<br/>Interpret, select, explain]
+    L --> N
+    N --> C[Reply and valid-ID cards]
+    C --> F[User clicks Find<br/>Three.js mapping and A*]
+    C --> B[User clicks Add<br/>Browser basket]
+```
+
+The **direct architecture** sends the compact full catalog, recent history and question in one model request. The LLM writes and selects IDs; code removes invalid/duplicate card IDs and maps products to the scene. User clicks trigger actions.
+
+## AI Product Decisions
+
+| Decision | Implementation and trade-off |
+| --- | --- |
+| **Catalog grounding** | Shared IDs connect cards and 3D objects. Card identity is checked; prose facts need stronger validation. |
+| **Explicit data provenance** | Food data is project-designed; prices are analog references or estimates, not verified package facts. |
+| **Language/action boundary** | The LLM interprets and recommends; code maps IDs and executes navigation and Basket. Arithmetic remains with the model. |
+| **Short context** | Last **eight messages**, cleared on refresh. Persistent requirements are a next step. |
+| **Human-in-the-loop** | Visitors choose Find / Add. Suggestions do not become purchases automatically; failed requests do not substitute products. |
+
+## Current Limitations
+
+Direct mode has limited memory, no active deterministic ranking and no comprehensive budget, nutrition, allergy or prose-to-card validation. Requests include the full catalog. SSE provides waiting updates; model text arrives as a completed response.
+
+## Next Iteration / Roadmap
+
+1. **Requirements:** retain goals, budgets and exclusions; test corrections and swaps across turns.
+2. **Verification:** audit food data; add deterministic arithmetic and explainable filtering/ranking. Evaluate constraint and card consistency.
+3. **Evaluation:** build multilingual task sets, test smaller inputs and waiting feedback, then measure completion, errors and latency with users.
+
+These are planned capabilities, not claims about the current implementation.
+
+## Tech Stack
+
+**Three.js / JavaScript**: scene and A* navigation · **Node.js**: backend and model adapter · **Bailian `qwen3.6-plus`**: direct replies · **JSON / GLB / Blender**: data and modeling.
+
+## Try Locally
+
+With Node.js 22+, run at the repository root:
 
 ```sh
 npm start
 ```
 
-Open **http://127.0.0.1:8011/**. Without API credentials, you can explore and browse; live model conversation requires the setup below. If another copy is already running on port 8011, stop it or choose a different `PORT` environment variable.
+Open [the local store](http://127.0.0.1:8011/). Browsing needs no model key; conversation requires your own server-side credentials. See [setup](server/README.md).
 
-### Enable the clerk
+## Evidence and Design Process
 
-Copy `server/.env.example` to `server/.env.bailian`, fill in `DASHSCOPE_API_KEY` locally, and restart the server. The example selects `qwen3.6-plus` and `CLERK_REPLY_MODE=direct`. Model availability, quotas and billing depend on the provider account; this repository does not provision an account or free credits. No automatic fallback model is configured.
+- **[Full architecture audit](docs/ai-pm/architecture-audit.md)** — Chinese report with code links, request tracing and offline evidence.
+- [30 product orthographic / multiview sheets](design/product-orthographics/README.md) — design-process references.
+- [Verification scope](docs/verification.md) · [Assets and dependencies](docs/asset-notes.md) · [Changelog](CHANGELOG.en.md)
 
-The browser sends requests to `/api/clerk`; the backend supplies credentials to the provider. Only `web/` is served as static content. See [server setup](server/README.md).
-
-### Verify the snapshot
-
-```sh
-npm run check
-npm test
-```
-
-Tests use mocked provider responses, not paid model requests. They cover both current code and retained structured-mode experiments; passing them does not establish real-model response quality.
-
-## Repository structure
-
-```text
-web/                  Browser application
-  src/                Scene, navigation, characters and clerk UI
-  models/             GLB assets loaded by the current scene
-  assets/             Referenced product and clerk images
-  data/               Catalog and separate project information
-  vendor/             Included Three.js libraries
-  tests/              Catalog and local-engine checks
-server/               Local HTTP server, model adapters and tests
-  skills/             Prompt material for retained structured experiments
-  .env.example        Empty credential template
-scripts/              Offline checks
-design/               Original product orthographic reference gallery
-docs/                 Project notes, screenshots and update guide
-```
-
-## Project boundaries
-
-This is a portfolio prototype, not an official 7-Eleven service or a real checkout. Prices and food information include project-designed values and similar-product references; they are not verified labels for real purchases. Direct model replies can still invent attributes or disagree with product cards. The character models are simplified prototypes, not exact reproductions of the approved concept artwork.
-
-In this review snapshot, 285 catalog entries use approved supplied images; the remaining 318 do not yet have the final approved label treatment. Existing render previews and service illustrations are not counted as finished labels.
-
-Editable Blender source files and historical modeling exports remain in the local modeling archive. The repository contains the runtime exports needed by the website. Uploading this repository does not deploy a public website.
-
-## Credits
-
-Built using Three.js, Blender and AI-assisted design/development workflows. Third-party marks and packaging remain the property of their respective owners. See [asset and dependency notes](docs/asset-notes.md). No blanket license is granted for the collected artwork or brand assets.
-
-[Changelog](CHANGELOG.en.md)
+Personal portfolio prototype; no official affiliation with 7-Eleven or featured brands.

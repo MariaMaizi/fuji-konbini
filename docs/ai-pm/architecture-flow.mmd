@@ -1,0 +1,22 @@
+flowchart TD
+    U[用户输入消息] --> UI[clerk-ui.js converse\n保存用户消息与最近历史]
+    UI --> ST[GET /api/clerk/status\n检查后端配置]
+    ST --> API[clerk-api.js reply\nPOST /api/clerk]
+    API --> S[clerk-server.cjs createServer\n输入校验 / 限流 / 读取目录]
+    C[product-catalog.json\n603款商品与场景映射] --> S
+    P[project-prices.json\n参考价或估价] --> EN[clerk-policy.cjs pricedCatalog\n合并数据]
+    F[project-food-information.json\n518款食品的虚拟标签] --> EN
+    I[参考配料与过敏资料] --> EN
+    S --> EN
+    EN --> D[clerk-direct.cjs messages\n拼装 system + 最近8条历史 + 当前问题]
+    D --> HTTP[clerk-server.cjs ask\nclerk-stream.cjs providerFetch]
+    HTTP --> L[百炼 qwen3.6-plus\n理解需求 / 自行选品 / 生成正文和ID]
+    L --> J[解析JSON / 检查模型完成状态]
+    J --> MAP[clerk-direct.cjs display\n正文原样保留\n删除无效或重复ID / 最多3张卡]
+    MAP --> SSE[SSE delta一次完整正文\ndone最终结果与诊断]
+    SSE --> CL[clerk-api.js\nID映射到前端可用商品对象]
+    CL --> R[clerk-ui.js message + card\ncatalog-panel.js renderProductCards]
+    R --> FIND[用户点击 Find\nlocate + getObjectByName + routeNear / A*]
+    R --> ADD[用户点击 Add\n购物篮ID数组 / sessionStorage]
+    HTTP --> ERR[网络 / 额度 / 格式错误]
+    ERR --> EUI[前端错误说明与重新填写入口\n不生成备用推荐]

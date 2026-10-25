@@ -1,0 +1,265 @@
+{
+  "auditDate": "2026-10-25",
+  "type": "read-only-source-audit-and-offline-fixture; no real LLM request",
+  "exampleInput": {
+    "message": "我在减脂，预算500日元，想吃饱一点，不要炸物。",
+    "history": [],
+    "language": "auto",
+    "sessionId": "direct",
+    "state": {
+      "context": "afternoon",
+      "size": "light",
+      "exclude": [],
+      "paused": false
+    },
+    "currentProductIds": [
+      "bakery:MELON_PAN",
+      "coffee:cafe-latte"
+    ]
+  },
+  "normalizedInput": {
+    "message": "我在减脂，预算500日元，想吃饱一点，不要炸物。",
+    "history": [],
+    "language": "auto",
+    "state": {
+      "context": "afternoon",
+      "size": "light",
+      "exclude": [],
+      "paused": false
+    },
+    "currentProductIds": [
+      "bakery:MELON_PAN",
+      "coffee:cafe-latte"
+    ]
+  },
+  "catalogRows": 603,
+  "foodRows": 518,
+  "systemCharacters": 98436,
+  "systemUTF8Bytes": 117430,
+  "satietyInFoodSource": 518,
+  "satietyTransmitted": false,
+  "directIgnoresUIState": true,
+  "uiStateForwardedToPrompt": false,
+  "currentProductIdsForwardedToPrompt": false,
+  "observedPayload": {
+    "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+    "model": "qwen3.6-plus",
+    "stream": false,
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    },
+    "enable_thinking": false,
+    "messageRoles": [
+      "system",
+      "user"
+    ],
+    "toolsPresent": false
+  },
+  "offlineFetchStubCalls": 1,
+  "realModelCalls": 0,
+  "fixtureInput": {
+    "message": "[离线构造，仅用于证明校验边界] 未核验数字9999千卡。",
+    "productIds": [
+      "oden:egg",
+      "unknown:audit-fixture",
+      "oden:egg"
+    ]
+  },
+  "fixtureAnswer": {
+    "message": "[离线构造，仅用于证明校验边界] 未核验数字9999千卡。",
+    "productIds": [
+      "oden:egg"
+    ],
+    "modelProductIds": [
+      "oden:egg",
+      "unknown:audit-fixture",
+      "oden:egg"
+    ],
+    "cardTitle": "For you",
+    "context": "afternoon",
+    "size": "light",
+    "dietaryCaution": false,
+    "sessionId": "direct",
+    "source": "llm",
+    "replyMode": "direct",
+    "provider": "bailian",
+    "model": "qwen3.6-plus",
+    "informationScope": "project_virtual_store"
+  },
+  "exampleRows": [
+    [
+      "chilled:1_01",
+      "鸡蛋三明治",
+      "Egg sandwich",
+      "たまごサンド",
+      "chilled",
+      320,
+      [
+        [
+          150,
+          "g"
+        ],
+        [
+          344,
+          11,
+          20,
+          30,
+          4,
+          1.3,
+          512,
+          0
+        ],
+        [
+          "面包",
+          "鸡蛋",
+          "蛋黄酱",
+          "盐"
+        ],
+        [
+          "wheat",
+          "egg",
+          "milk"
+        ],
+        [],
+        "cold",
+        [
+          false
+        ]
+      ]
+    ],
+    [
+      "oden:daikon",
+      "白萝卜",
+      "Oden · daikon",
+      "おでん・大根",
+      "oden",
+      130,
+      [
+        [
+          100,
+          "g"
+        ],
+        [
+          16,
+          1,
+          0,
+          3,
+          1,
+          0.6,
+          236,
+          0
+        ],
+        [
+          "主料",
+          "关东煮汤底",
+          "萝卜"
+        ],
+        [],
+        [],
+        "hot",
+        [
+          false
+        ]
+      ]
+    ],
+    [
+      "oden:egg",
+      "炖鸡蛋",
+      "Oden · egg",
+      "おでん・たまご",
+      "oden",
+      150,
+      [
+        [
+          60,
+          "g"
+        ],
+        [
+          77,
+          6.7,
+          4.9,
+          1.4,
+          0.5,
+          0.6,
+          236,
+          0
+        ],
+        [
+          "主料",
+          "关东煮汤底",
+          "鸡蛋"
+        ],
+        [
+          "egg"
+        ],
+        [],
+        "hot",
+        [
+          false
+        ]
+      ]
+    ]
+  ],
+  "sha256": {
+    "server/clerk-server.cjs": "bb20bcc8d96d9afab1c29ff161d063c3430af64d6d5731dd3a9e75348f8154f7",
+    "server/clerk-direct.cjs": "faa02efdedddbbad1faff93e00c5e90ea20e1d5f921db0cbbfdba4d8788f73fa",
+    "server/clerk-policy.cjs": "25928d0df1bc0deb8c0b445bc6b0bfb2fd6dc8e9f7797a9ed2a1b8551ee9d6f9",
+    "server/food-agent.cjs": "2c5071b1b2ed192d89a251477f30317d7740f35cd141be7c01973f5a0c1cf495",
+    "server/clerk-stream.cjs": "54af44ce820008d22f0f3577b9d6645ba89d5bb27a4eaa5d8aa8a39a4d30bfc3",
+    "outputs/fuji-711-diorama/src/clerk-ui.js": "a24b402b58686794a72ad070b84beef015b05ed01d2c6bab5e9f828488203c5c",
+    "outputs/fuji-711-diorama/src/clerk-api.js": "7e62c2eb77719f34fe96fb171fef445966f683343bf5cab23b60b5b1f7a9b488",
+    "outputs/fuji-711-diorama/src/catalog-panel.js": "4fc780445c0ae9359984b14476acbb9f8c58934d0a74451debfda0cdd42c1f5b",
+    "outputs/fuji-711-diorama/src/product-catalog.js": "b429dddb14a299bb2da523cd7f0e055d3f2e0b1be96c509115075d26eb0b1056",
+    "outputs/fuji-711-diorama/src/navigation.js": "2bf5188fb7a84a8959a3ae30236fc324767516dc66e1c15f22644a055bb0b021",
+    "outputs/fuji-711-diorama/data/product-catalog.json": "369f3223c03cd082c4383b6dadcde2dae95e36d822c8562bf6afbf23c89d825a",
+    "outputs/fuji-711-diorama/data/project-food-information.json": "a9f5fa4a1ef7967b2a9037ed85384137e17fa3a30a7963b2c5f42fab5c7abe08",
+    "outputs/fuji-711-diorama/data/project-prices.json": "175035f3a400470cc3eaf8614563babf1fc564add55c2a269c6368ef7f381ff5",
+    "work/build-food-information-v57.cjs": "b3ccc60498d8eb783259e749542e0bb4f1da6f98e05032f0d26e493073ac8f3c",
+    "outputs/fuji-711-diorama/src/characters.js": "9a246af15679d170426f3126e488f3f19a93baedec2fe731bfa509eb6eea903c",
+    "outputs/fuji-711-diorama/app.js": "d83b7ef9a9399f15eb66b6bbf2e0d6366e5d3cf1ba599c8e9eb2bbb9cfe27469",
+    "server/clerk-allergens.cjs": "4e26353ba72329e471494ff32484d950ba46b143184cb0431edfa7441aa40ddf",
+    "server/clerk-ingredients.cjs": "eb239ca256c2f853bab050c34c647b4d321cd555c343db074346d85b165d21ac"
+  },
+  "dataStatistics": {
+    "catalog": 603,
+    "foodRecords": 518,
+    "nonfoodRecords": 85,
+    "artworkKinds": {
+      "user-ai-reference": 419,
+      "pending": 174,
+      "model-render": 7,
+      "service-illustration": 3
+    },
+    "priceTypes": {
+      "category_estimate": 485,
+      "official_analog": 118
+    }
+  },
+  "sourceHashesUnchangedAfterAudit": true,
+  "originalAuditDate": "2026-10-13",
+  "runtimeStatusHistorical": {
+    "configured": true,
+    "provider": "bailian",
+    "model": "qwen3.6-plus",
+    "runtime": "local-app-backend",
+    "pid": 28136,
+    "informationScope": "project_virtual_store",
+    "replyMode": "direct",
+    "fallbackModel": null
+  },
+  "runtimeVerification": {
+    "date": "2026-10-25",
+    "statusEndpointReachable": false,
+    "observation": "Local 127.0.0.1:8011 status request could not connect; server not started or changed by audit.",
+    "configurationOnly": {
+      "provider": "bailian",
+      "model": "qwen3.6-plus",
+      "replyMode": "direct",
+      "configured": true,
+      "fallbackModel": null,
+      "keySource": "server/.env.bailian",
+      "proxyConfigured": true
+    }
+  }
+}

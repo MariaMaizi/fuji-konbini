@@ -7,6 +7,8 @@
 读者：正在学习 AI 产品经理知识的项目作者
 范围：当前本地网页及它实际使用的 Node 后端；只读审查，不重构、不修改 Agent，不发送真实模型请求。
 
+> 界面更新（2026-10-25）：按用户要求，店内探索现仅保留第一人称。当前视角、模块引用已同步；下方模型路径、数据和离线实验仍为原审查证据。`audit-evidence.json` 中的源文件哈希是审查时的历史快照，不代表本次界面调整后的全文件一致性；AI对话后端与商品数据未因该调整改变。
+
 ## 先理解最重要的结论
 
 **当前代码与配置指定的聊天实现，是“全量商品目录 + 最近聊天历史 → 单次 LLM 直接回答、直接选商品 → 普通代码把 ID 变成卡片”。**
@@ -145,7 +147,7 @@ stream: false（当前 direct 的上游请求）
 | 当前推荐 ID | 前端 `selected / aiProducts` | 初始化为本地情境搭配 | 请求携带，但 direct.messages 没有使用 |
 | `sessionId` | 前端变量；direct返回固定字符串 `direct` | 清空 | 没有对应服务端独立记忆 |
 | 购物篮 | 前端数组 + `sessionStorage['fuji-basket-v22']` | 同标签页刷新通常恢复 | 当前不发送给模型 |
-| 角色/视角偏好 | `localStorage` | 通常保留 | 不发送 |
+| 行走视角 | 由导航相机提供第一人称视角 | 无需保存视角偏好 | 不发送 |
 | 旧版需求记忆 | 后端 `sessions Map` | 服务重启丢失；旧模式30分钟不活动过期 | 当前 direct 路径不创建/读取/更新 |
 
 聊天记录既没有数据库持久化，也没有存入 sessionStorage。购物篮能恢复，并不代表聊天偏好也能恢复。模型 API 请求也没有接入一个持久会话对象；每次重新组装 `messages`。
@@ -364,7 +366,7 @@ direct路径不会运行 `eligibility()`、`validateAnswer()`、`checkedReply()`
 4. 必要时进入步行模式；以目录 `stand` 作为货架前站立位置。
 5. `nav.routeNear()` 在附近0.2m网格上找可站点；尝试距离最近的最多20点。
 6. `routeTo()` 用A*搜索四方向路径，避开碰撞；逐帧更新位置，到达后朝向商品。
-7. 用户按WASD可以取消引导。第三人称下移动的是 `navigation.camera` 逻辑行走相机，`characters.js` 再跟随它更新人物与渲染相机。
+7. 用户按WASD可以取消引导。第一人称行走与渲染使用同一个 `navigation.camera / ctx.camera`；`store-clerk.js` 仅处理收银台店员与靠近交谈入口，不接管相机。
 
 Find无需后端请求或额外模型token。即使LLM在正文说“我带你去”，真正移动仍须触发现有前端操作；当前正文没有这类虚假执行宣称的强制校验。
 
@@ -448,7 +450,7 @@ sessionId='direct'
 | 模块 | 文件与核心函数 | 当前作用/状态 |
 |---|---|---|
 | 启动 | [start-preview.ps1](source-context.md#local-preview-launcher) | 隐藏启动Node、本地8011；服务未运行时恢复 |
-| 场景装配 | [app.js:223](../../web/app.js) | 加载目录、角色、店员UI |
+| 场景装配 | [app.js:223](../../web/app.js) | 加载目录、收银台店员、店员UI |
 | 前端聊天与操作 | [clerk-ui.js](../../web/src/clerk-ui.js)：`installClerkUI/message/converse/card/locate/addProduct/basketRender` | 当前启用 |
 | 前端API | [clerk-api.js](../../web/src/clerk-api.js)：`createClient/status/reply/diagnosticText` | 同源请求、SSE解析、ID映射与错误提示 |
 | 图卡/Browse | [catalog-panel.js](../../web/src/catalog-panel.js)：`artwork/productRow/renderProductCards/enhanceClerkCatalog` | 图片、名称、分页、文本搜索与分类过滤 |
@@ -459,7 +461,7 @@ sessionId='direct'
 | 目录合并 | [clerk-policy.cjs:7](../../server/clerk-policy.cjs)：`pricedCatalog` | 当前会调用此合并函数；不代表整个policy编排启用 |
 | 网络适配 | [clerk-stream.cjs](../../server/clerk-stream.cjs)：`providerFetch/consumeZhipu` | 原生HTTPS、可选本地CONNECT代理、AbortSignal；上游流式消费函数当前direct不走 |
 | 3D寻路 | [navigation.js](../../web/src/navigation.js)：`routeNear/routeTo/blocked/move/update` | 0.2m网格A*、碰撞、逐帧行走 |
-| 角色和第三人称 | [characters.js:62](../../web/src/characters.js)：`installCharacters/update` | 逻辑行走相机与渲染相机分离、角色跟随 |
+| 收银台店员 | [store-clerk.js](../../web/src/store-clerk.js)：`makeStoreClerk/installStoreClerk/update` | 保留店员与靠近交谈；第一人称相机由navigation管理 |
 | 虚拟食品标签生成 | [build-food-information-v57.cjs](source-context.md#virtual-food-data-generator) | 离线生成数据；每次用户聊天不会运行 |
 | 旧结构化Food Agent | [food-agent.cjs](../../server/food-agent.cjs)：`blankMemory/facts/parsePlan/eligibility/rank/planOptions/orchestrate/validateAnswer` | 文件存在，当前聊天绕过 |
 | 旧状态/证据/决策 | [food-information.cjs](../../server/food-information.cjs)、[food-evidence.cjs](../../server/food-evidence.cjs)、[food-control.cjs](../../server/food-control.cjs)、[food-decision-reply.cjs](../../server/food-decision-reply.cjs) | 当前绕过，不提供当前需求记忆/冲突检查 |

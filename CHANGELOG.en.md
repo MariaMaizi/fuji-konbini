@@ -2,6 +2,13 @@
 
 [简体中文](CHANGELOG.md) · **English**
 
+## First-person exploration — 2026-10-25
+
+- Standardized indoor and street walking on the first-person camera; removed customer avatars, style selection and viewpoint switching.
+- Preserved the 3D cashier, chat illustration, product cards, Find / A* navigation and basket.
+- Updated bilingual project descriptions, current architecture references and application screenshots; dated audit evidence remains a historical snapshot.
+- Passed 206 offline tests and browser checks for entering the store, product wayfinding and basket actions. No live model calls were made.
+
 ## Bilingual changelog — 2026-10-11
 
 - Made the Chinese changelog the default and preserved the English edition in CHANGELOG.en.md.

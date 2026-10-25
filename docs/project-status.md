@@ -1,14 +1,14 @@
-# Current status — 2026-10-10
+# Current status — 2026-10-25
 
 ## Implemented
 
-Current scene layers, prototype customer/cashier characters, view switching, 603-entry catalog, search, shopping basket, navigation to products, and model-backed clerk UI. The latest supplied-image integration includes all 100 chilled-food entries.
+Current scene layers, first-person walking, a prototype cashier, 603-entry catalog, search, shopping basket, navigation to products, and model-backed clerk UI. The latest supplied-image integration includes all 100 chilled-food entries.
 
 ## Still being refined
 
 - Model prose can invent product attributes and may not fully match the selected cards. Real-model semantic quality is not fully accepted.
 - 285 entries have approved supplied label images; 318 remain without the final approved treatment. New label generation stays paused pending user-provided material/instructions.
-- Customer models are simplified code-generated shapes. More detailed, rigged characters are future work.
+- Exploration uses the first-person camera only. The cashier remains a simplified prototype.
 - English clerk controls coexist with some Chinese outer-scene interface text. Full-site localization is not complete.
 - Mobile performance and production hosting need further work. This repository is a local prototype, not an online shop.
 

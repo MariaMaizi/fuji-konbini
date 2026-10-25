@@ -10,7 +10,7 @@ Fuji.Navigation=class {
     document.getElementById('exterior-mode').onclick=()=>this.exterior();
     document.getElementById('walk-outside').onclick=()=>this.walkOutside();
     document.getElementById('look-around').onclick=()=>this.lock();
-    window.addEventListener('keydown',e=>{if(this.mode!=='walk'||e.target.closest('input,textarea,select,[contenteditable=true],#clerk-panel')||document.querySelector('#basket-panel:not([hidden]),#character-settings:not([hidden])'))return;if(['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)){this.keys.add(e.code);e.preventDefault();}if(e.code==='Escape'){this.path=[];this.keys.clear();if(document.pointerLockElement)document.exitPointerLock();}});
+    window.addEventListener('keydown',e=>{if(this.mode!=='walk'||e.target.closest('input,textarea,select,[contenteditable=true],#clerk-panel')||document.querySelector('#basket-panel:not([hidden])'))return;if(['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)){this.keys.add(e.code);e.preventDefault();}if(e.code==='Escape'){this.path=[];this.keys.clear();if(document.pointerLockElement)document.exitPointerLock();}});
     window.addEventListener('keyup',e=>this.keys.delete(e.code));
     window.addEventListener('blur',()=>{this.keys.clear();this.velocity.set(0,0);});
     document.addEventListener('pointerlockchange',()=>{this.keys.clear();this.updateUI();});

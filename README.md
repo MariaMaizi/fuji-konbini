@@ -36,9 +36,9 @@
 3. **走到货架前**：点击 **Find** 标记对应商品，沿 Three.js 场景中的 **A\* 路径**前往可站立位置。
 4. **自己作选择**：点击单品 **Add** 或 **Add pairing**，在 Basket 查看数量、移除商品并导出虚拟清单。
 
-![商品选择界面：商品图、Find 与 Add](docs/images/product-browser.png)
+![商品选择界面：商品图、Find 与 Add](docs/images/product-browser.jpg)
 
-顾客支持第三人称／第一人称切换和两种简化造型，收银台有 3D 店员。购物篮用于体验选择过程，没有支付和真实订单。
+用户以第一人称在店内探索，收银台保留 3D 店员。购物篮用于体验选择过程，没有支付和真实订单。
 
 ## How It Works
 
@@ -107,7 +107,7 @@ flowchart LR
 
 | 技术 | 用途 |
 | --- | --- |
-| Three.js / JavaScript | 3D 场景、人物、商品交互、A* 寻路 |
+| Three.js / JavaScript | 3D 场景、店员、商品交互、A* 寻路 |
 | Node.js | 同源 HTTP 服务、模型适配与诊断；密钥仅由后端使用 |
 | 百炼 / Qwen | 当前配置为 `qwen3.6-plus`、`direct` 模式 |
 | JSON / GLB / Blender | 商品与虚拟食品数据、场景导出、模型与材质工作流 |

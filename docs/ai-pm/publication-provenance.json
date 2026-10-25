@@ -1,8 +1,8 @@
 {
   "auditDate": "2026-10-25",
   "canonicalAudit": "docs/ai-pm/architecture-audit.md in original modeling workspace",
-  "canonicalAuditSHA256": "20d1339bf0d9e82163e68307f68e0c80add907891f139af5dcadf63a54c25168",
-  "publishedAuditSHA256": "78465676e48b42e82dd7b9f3cac7e67f65d5988a192e0384ed1360c024c1dd92",
+  "canonicalAuditSHA256": "9db987585cc9cb649ea8a6066630ef4ee7527d64c2dc5f241c5ad9ef32ee49c8",
+  "publishedAuditSHA256": "03ed574cfcba97620968bcbcd4f26e8ab668d1835b3a85fd2514ebc8e34a5fe8",
   "changes": [
     "Added publication/snapshot scope note",
     "Converted local absolute code links to repository-relative module links; omitted source-line anchors for GitHub Markdown portability",
@@ -12,5 +12,11 @@
   ],
   "localGeneratorSHA256": "b3ccc60498d8eb783259e749542e0bb4f1da6f98e05032f0d26e493073ac8f3c",
   "runtimeCodeChanged": false,
-  "realModelCalls": 0
+  "realModelCalls": 0,
+  "postAuditUIRevision": {
+    "date": "2026-10-25",
+    "change": "First-person-only exploration; cashier retained; current camera/module references updated; historical evidence hashes retained",
+    "aiBackendChanged": false,
+    "productDataChanged": false
+  }
 }

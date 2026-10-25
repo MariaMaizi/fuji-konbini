@@ -31,9 +31,9 @@ The prototype serves **situational selection and store exploration** through two
 3. **Find it in the store.** Click **Find** to mark the product and follow an **A\* route** through the Three.js scene.
 4. **Make the choice.** Use **Add** or **Add pairing**, adjust quantities in Basket and export a virtual receipt.
 
-![Product selection with artwork, Find and Add](docs/images/product-browser.png)
+![Product selection with artwork, Find and Add](docs/images/product-browser.jpg)
 
-Explore in first or third person with two customer styles and a 3D cashier. The catalog includes 600 modeled product entries and three coffee services. Clerk controls are English, with Japanese signage and some Chinese scene controls. No payments or real orders.
+Explore the store in first person and talk to the 3D cashier. The catalog includes 600 modeled product entries and three coffee services. Clerk controls are English, with Japanese signage and some Chinese scene controls. No payments or real orders.
 
 ## How It Works
 

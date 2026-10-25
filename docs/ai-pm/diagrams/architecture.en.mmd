@@ -1,0 +1,15 @@
+flowchart TD
+    U["Message and short-term context<br/>Question + last 8 messages"]
+    D["Product data<br/>603 catalog entries and prices<br/>518 virtual food records"]
+    N["Node.js backend<br/>Build request and parse reply<br/>Remove invalid / duplicate IDs"]
+    L["LLM · qwen3.6-plus<br/>Bailian: interpret, select, explain<br/>Return message + productIds"]
+    C["Reply and product cards<br/>Up to 3 cards<br/>ID → catalog, artwork and 3D node"]
+    F["User clicks Find<br/>Three.js mapping and A* navigation<br/>First-person walk to the shelf"]
+    B["User clicks Add<br/>Browser basket and quantities<br/>Remove items or export a virtual list"]
+    U --> N
+    D --> N
+    N --> L
+    L --> N
+    N --> C
+    C --> F
+    C --> B

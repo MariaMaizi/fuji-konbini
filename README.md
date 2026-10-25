@@ -42,16 +42,9 @@
 
 ## How It Works
 
-```mermaid
-flowchart LR
-    U[用户消息与最近历史] --> N[Node.js 后端]
-    D[603条目录与项目价格<br/>518条食品虚拟信息] --> N
-    N --> L[百炼 qwen3.6-plus<br/>理解需求、选商品、写回复]
-    L --> N
-    N --> C[文字与有效ID商品卡]
-    C --> F[点击 Find<br/>Three.js 定位与A*导航]
-    C --> B[点击 Add<br/>前端购物篮]
-```
+![当前 Agent 架构：消息与商品数据经 Node 后端发送给 LLM，返回回复和商品卡，由用户点击 Find 或 Add 执行动作](docs/images/agent-architecture.zh-CN.svg)
+
+[查看高清架构图](docs/images/agent-architecture.zh-CN.svg) · [可编辑流程源文件](docs/ai-pm/diagrams/architecture.zh-CN.mmd)
 
 当前使用 **direct architecture**：每次将全量精简目录、最近聊天历史和当前问题发送给模型。LLM 返回文字与商品 ID；Node 后端去除无效／重复 ID，前端再映射到商品与场景节点。Find 和加购由用户点击前端函数触发。
 

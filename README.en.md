@@ -37,16 +37,9 @@ Explore the store in first person and talk to the 3D cashier. The catalog includ
 
 ## How It Works
 
-```mermaid
-flowchart LR
-    U[Message and recent history] --> N[Node.js backend]
-    D[603 catalog entries and prices<br/>518 virtual food records] --> N
-    N --> L[Bailian qwen3.6-plus<br/>Interpret, select, explain]
-    L --> N
-    N --> C[Reply and valid-ID cards]
-    C --> F[User clicks Find<br/>Three.js mapping and A*]
-    C --> B[User clicks Add<br/>Browser basket]
-```
+![Current agent architecture: Node sends messages and catalog facts to the LLM, maps the reply to cards, and user clicks trigger Find or Add](docs/images/agent-architecture.en.svg)
+
+[Full-size diagram](docs/images/agent-architecture.en.svg) · [Editable flow source](docs/ai-pm/diagrams/architecture.en.mmd)
 
 The **direct architecture** sends the compact full catalog, recent history and question in one model request. The LLM writes and selects IDs; code removes invalid/duplicate card IDs and maps products to the scene. User clicks trigger actions.
 

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="724" viewBox="0 0 1040 724" role="img" aria-labelledby="title desc" xml:lang="en">
+<title id="title">Fuji Konbini: from conversation to in-store action</title><desc id="desc">Node combines the question, the last eight messages and compact full-catalog facts for Bailian. The model returns prose and product IDs. Code removes invalid and duplicate IDs and displays up to three cards. User clicks trigger Find with A* navigation or Add to the browser basket.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#527361"/></marker></defs>
+<rect width="1040" height="724" rx="12" fill="#fafbf8"/>
+<g font-family="Arial, 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif" text-anchor="middle">
+<text x="520" y="36" font-size="18" fill="#52655a">Fuji Konbini · Current direct architecture</text>
+<g fill="none" stroke="#527361" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"><path d="M520 156V218"/><path d="M306 273H350"/><path d="M690 248H734"/><path d="M734 298H690"/><path d="M520 328V390"/><path d="M520 494V526H330V560"/><path d="M520 494V526H710V560"/></g>
+<g id="node-U"><rect x="350" y="70" width="340" height="86" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="520" y="102" font-size="20" font-weight="600" fill="#244734">Message and short-term context</text>
+<text x="520" y="128" font-size="15" fill="#52655a">Question + last 8 messages</text></g>
+<g id="node-D"><rect x="28" y="218" width="278" height="110" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="167" y="250" font-size="20" font-weight="600" fill="#244734">Product data</text>
+<text x="167" y="276" font-size="15" fill="#52655a">603 catalog entries and prices</text><text x="167" y="299" font-size="15" fill="#52655a">518 virtual food records</text></g>
+<g id="node-N"><rect x="350" y="218" width="340" height="110" rx="9" fill="#214c39" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="520" y="250" font-size="20" font-weight="600" fill="#ffffff">Node.js backend</text>
+<text x="520" y="276" font-size="15" fill="#e1ece3">Build request and parse reply</text><text x="520" y="299" font-size="15" fill="#e1ece3">Remove invalid / duplicate IDs</text></g>
+<g id="node-L"><rect x="734" y="218" width="278" height="110" rx="9" fill="#eef2e8" stroke="#7a895e" stroke-width="2"/>
+<text x="873" y="250" font-size="19" font-weight="600" fill="#244734">LLM · qwen3.6-plus</text>
+<text x="873" y="276" font-size="15" fill="#52655a">Bailian: interpret, select, explain</text><text x="873" y="299" font-size="15" fill="#52655a">Return message + productIds</text></g>
+<g id="node-C"><rect x="350" y="390" width="340" height="104" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="520" y="422" font-size="20" font-weight="600" fill="#244734">Reply and product cards</text>
+<text x="520" y="448" font-size="15" fill="#52655a">Up to 3 cards</text><text x="520" y="471" font-size="15" fill="#52655a">ID → catalog, artwork and 3D node</text></g>
+<g id="node-F"><rect x="170" y="560" width="320" height="104" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="330" y="592" font-size="20" font-weight="600" fill="#244734">User clicks Find</text>
+<text x="330" y="618" font-size="15" fill="#52655a">Three.js mapping and A* navigation</text><text x="330" y="641" font-size="15" fill="#52655a">First-person walk to the shelf</text></g>
+<g id="node-B"><rect x="550" y="560" width="320" height="104" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="710" y="592" font-size="20" font-weight="600" fill="#244734">User clicks Add</text>
+<text x="710" y="618" font-size="15" fill="#52655a">Browser basket and quantities</text><text x="710" y="641" font-size="15" fill="#52655a">Remove items or export a virtual list</text></g>
+<text x="520" y="704" font-size="15" fill="#52655a">The model suggests; code connects products and actions. Valid card IDs do not verify prose facts.</text>
+</g></svg>

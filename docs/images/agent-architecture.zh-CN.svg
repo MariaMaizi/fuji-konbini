@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="724" viewBox="0 0 1040 724" role="img" aria-labelledby="title desc" xml:lang="zh-CN">
+<title id="title">Fuji Konbini：从对话到店内行动</title><desc id="desc">用户消息和最近八条历史与全量精简商品数据在 Node 后端组合，发送至百炼模型。模型返回正文和商品 ID；代码过滤无效、重复 ID，并展示最多三张商品卡。用户点击 Find 才执行定位和 A* 导航，点击 Add 才加入购物篮。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#527361"/></marker></defs>
+<rect width="1040" height="724" rx="12" fill="#fafbf8"/>
+<g font-family="Arial, 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif" text-anchor="middle">
+<text x="520" y="36" font-size="18" fill="#52655a">Fuji Konbini · 当前 direct 架构</text>
+<g fill="none" stroke="#527361" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#arrow)"><path d="M520 156V218"/><path d="M306 273H350"/><path d="M690 248H734"/><path d="M734 298H690"/><path d="M520 328V390"/><path d="M520 494V526H330V560"/><path d="M520 494V526H710V560"/></g>
+<g id="node-U"><rect x="350" y="70" width="340" height="86" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="520" y="102" font-size="20" font-weight="600" fill="#244734">用户消息与短期上下文</text>
+<text x="520" y="128" font-size="15" fill="#52655a">当前问题 + 最近 8 条历史</text></g>
+<g id="node-D"><rect x="28" y="218" width="278" height="110" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="167" y="250" font-size="20" font-weight="600" fill="#244734">商品数据</text>
+<text x="167" y="276" font-size="15" fill="#52655a">603 个目录条目与项目价格</text><text x="167" y="299" font-size="15" fill="#52655a">518 条食品虚拟信息</text></g>
+<g id="node-N"><rect x="350" y="218" width="340" height="110" rx="9" fill="#214c39" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="520" y="250" font-size="20" font-weight="600" fill="#ffffff">Node.js 后端</text>
+<text x="520" y="276" font-size="15" fill="#e1ece3">拼装请求与解析回复</text><text x="520" y="299" font-size="15" fill="#e1ece3">过滤无效、重复商品 ID</text></g>
+<g id="node-L"><rect x="734" y="218" width="278" height="110" rx="9" fill="#eef2e8" stroke="#7a895e" stroke-width="2"/>
+<text x="873" y="250" font-size="19" font-weight="600" fill="#244734">LLM · qwen3.6-plus</text>
+<text x="873" y="276" font-size="15" fill="#52655a">百炼：理解需求、选品、写回复</text><text x="873" y="299" font-size="15" fill="#52655a">返回 message + productIds</text></g>
+<g id="node-C"><rect x="350" y="390" width="340" height="104" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="520" y="422" font-size="20" font-weight="600" fill="#244734">回复与商品卡</text>
+<text x="520" y="448" font-size="15" fill="#52655a">最多 3 张卡片</text><text x="520" y="471" font-size="15" fill="#52655a">ID → 目录名称、图片与场景节点</text></g>
+<g id="node-F"><rect x="170" y="560" width="320" height="104" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="330" y="592" font-size="20" font-weight="600" fill="#244734">用户点击 Find</text>
+<text x="330" y="618" font-size="15" fill="#52655a">Three.js 商品定位与 A* 导航</text><text x="330" y="641" font-size="15" fill="#52655a">第一人称前往货架</text></g>
+<g id="node-B"><rect x="550" y="560" width="320" height="104" rx="9" fill="#ffffff" stroke="#b8cabc" stroke-width="1.4"/>
+<text x="710" y="592" font-size="20" font-weight="600" fill="#244734">用户点击 Add</text>
+<text x="710" y="618" font-size="15" fill="#52655a">前端购物篮与数量管理</text><text x="710" y="641" font-size="15" fill="#52655a">可移除商品、导出虚拟清单</text></g>
+<text x="520" y="704" font-size="15" fill="#52655a">模型提供建议；代码连接商品与动作。有效商品卡不代表正文事实已核验。</text>
+</g></svg>

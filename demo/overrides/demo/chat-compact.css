@@ -1,0 +1,24 @@
+/* Demo-only layout: give recovered space to the scrollable conversation. */
+.clerk-panel .clerk-header{min-height:64px;padding-top:2px}
+.clerk-panel .clerk-portrait{width:72px;height:60px}
+.clerk-panel .clerk-heading h2{font-size:22px;margin:7px 0 3px}
+.clerk-view-tabs{padding:2px 0}
+.clerk-body{gap:3px;padding:4px 0;min-height:0}
+.clerk-preferences{margin:0;padding:0}
+.clerk-preferences:not([open])>summary{min-height:30px;padding:5px 3px;line-height:18px}
+.clerk-preferences:not([open])>:not(summary){display:none!important}
+.clerk-card{margin:0;padding:6px 8px;max-height:150px}
+.clerk-card h3{margin:0 0 4px}
+.clerk-card-reason:empty{display:none}
+.clerk-products .catalog-product{padding-top:2px!important;padding-bottom:2px!important}
+.clerk-pair-tools{padding:4px 0}
+.clerk-composer{padding:4px 0 7px}
+body.clerk-open #demo-tools:not([open]){margin-top:3px;padding:1px 8px}
+body.clerk-open #demo-tools:not([open])>summary{min-height:28px;line-height:26px}
+#clerk-messages>*{flex-shrink:0}
+.demo-followup{display:flex;flex-direction:column;gap:4px;margin:0 0 5px;color:#61735b;font:12px/1.4 'Segoe UI','Microsoft YaHei',sans-serif}
+.demo-followup button{align-self:flex-start;max-width:100%;min-height:44px;padding:7px 11px;border:1px solid #acbda1;border-radius:12px;background:#e5ecdc;color:#31573d;cursor:pointer;text-align:left;font:13px/1.5 'Segoe UI','Microsoft YaHei',sans-serif;white-space:normal}
+.demo-followup button:hover{background:#d9e5ce}.demo-followup button:focus-visible{outline:3px solid #b98035;outline-offset:2px}
+.demo-nutrition{display:flex;flex-direction:column;gap:4px;padding:9px 11px;border:1px solid #bdcbb1;border-radius:10px;background:#f4f6eb;color:#36543c;font:12px/1.5 'Segoe UI','Microsoft YaHei',sans-serif}.demo-nutrition strong{font-size:11px;font-weight:400;letter-spacing:.02em}.demo-nutrition>span{font-size:11px}.demo-nutrition p{margin:0;font-size:16px}.demo-nutrition small{font-size:10px;color:#66715d}.demo-nutrition-change{color:#466547}
+@media(max-height:600px){.clerk-card{max-height:110px}.clerk-panel .clerk-header{min-height:52px}.clerk-panel .clerk-portrait{height:48px;width:56px}}
+@media(max-width:760px){.clerk-panel .clerk-header{min-height:60px}.clerk-panel .clerk-portrait{height:54px;width:58px}}

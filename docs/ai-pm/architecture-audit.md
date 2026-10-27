@@ -9,6 +9,8 @@
 
 > 界面更新（2026-10-25）：按用户要求，店内探索现仅保留第一人称。当前视角、模块引用已同步；下方模型路径、数据和离线实验仍为原审查证据。`audit-evidence.json` 中的源文件哈希是审查时的历史快照，不代表本次界面调整后的全文件一致性；AI对话后端与商品数据未因该调整改变。
 
+> 2026-10-26展示更新：3D收银店员已移除；新增的静态Demo为独立预设流程，四款虚拟营养合计只存在于Demo覆盖文件中，不改变本报告所述正式Agent的direct实现。详见 [Demo说明](../../demo/README.md)。
+
 ## 先理解最重要的结论
 
 **当前代码与配置指定的聊天实现，是“全量商品目录 + 最近聊天历史 → 单次 LLM 直接回答、直接选商品 → 普通代码把 ID 变成卡片”。**
@@ -366,7 +368,7 @@ direct路径不会运行 `eligibility()`、`validateAnswer()`、`checkedReply()`
 4. 必要时进入步行模式；以目录 `stand` 作为货架前站立位置。
 5. `nav.routeNear()` 在附近0.2m网格上找可站点；尝试距离最近的最多20点。
 6. `routeTo()` 用A*搜索四方向路径，避开碰撞；逐帧更新位置，到达后朝向商品。
-7. 用户按WASD可以取消引导。第一人称行走与渲染使用同一个 `navigation.camera / ctx.camera`；`store-clerk.js` 仅处理收银台店员与靠近交谈入口，不接管相机。
+7. 用户按WASD可以取消引导。第一人称行走与渲染使用同一个 `navigation.camera / ctx.camera`；2026-10-26已移除收银台3D店员及靠近交谈入口，2D聊天面板仍可打开。
 
 Find无需后端请求或额外模型token。即使LLM在正文说“我带你去”，真正移动仍须触发现有前端操作；当前正文没有这类虚假执行宣称的强制校验。
 
@@ -461,7 +463,7 @@ sessionId='direct'
 | 目录合并 | [clerk-policy.cjs:7](../../server/clerk-policy.cjs)：`pricedCatalog` | 当前会调用此合并函数；不代表整个policy编排启用 |
 | 网络适配 | [clerk-stream.cjs](../../server/clerk-stream.cjs)：`providerFetch/consumeZhipu` | 原生HTTPS、可选本地CONNECT代理、AbortSignal；上游流式消费函数当前direct不走 |
 | 3D寻路 | [navigation.js](../../web/src/navigation.js)：`routeNear/routeTo/blocked/move/update` | 0.2m网格A*、碰撞、逐帧行走 |
-| 收银台店员 | [store-clerk.js](../../web/src/store-clerk.js)：`makeStoreClerk/installStoreClerk/update` | 保留店员与靠近交谈；第一人称相机由navigation管理 |
+| 收银台3D店员 | 2026-10-26按作者要求移除模块及靠近交谈入口 | 2D聊天面板保留；第一人称相机由navigation管理 |
 | 虚拟食品标签生成 | [build-food-information-v57.cjs](source-context.md#virtual-food-data-generator) | 离线生成数据；每次用户聊天不会运行 |
 | 旧结构化Food Agent | [food-agent.cjs](../../server/food-agent.cjs)：`blankMemory/facts/parsePlan/eligibility/rank/planOptions/orchestrate/validateAnswer` | 文件存在，当前聊天绕过 |
 | 旧状态/证据/决策 | [food-information.cjs](../../server/food-information.cjs)、[food-evidence.cjs](../../server/food-evidence.cjs)、[food-control.cjs](../../server/food-control.cjs)、[food-decision-reply.cjs](../../server/food-decision-reply.cjs) | 当前绕过，不提供当前需求记忆/冲突检查 |

@@ -1,0 +1,1049 @@
+{
+  "sourceSiteCommit": "045ad6c02724c21e8a4a4391fde97aaaf3c06406",
+  "mode": "prepared",
+  "modelCallsDuringRecording": 0,
+  "author": "MariaMaizi",
+  "modelAssets": "reuse unmodified self-contained web/models GLBs, instead of deployment-only chunking",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 5307,
+      "sha256": "d9c74080b8302c471f6854397c50ce1ca31e0a5f36a6d2ba5704193dbfa32bad"
+    },
+    {
+      "path": "data/product-catalog.json",
+      "bytes": 473930,
+      "sha256": "369f3223c03cd082c4383b6dadcde2dae95e36d822c8562bf6afbf23c89d825a"
+    },
+    {
+      "path": "demo/chat-compact.css",
+      "bytes": 2266,
+      "sha256": "52a239c04fd9cbdc1745d886507fbc5571756d3f9c489d043dbd12a16ae21d2a"
+    },
+    {
+      "path": "demo/cover.jpg",
+      "bytes": 100456,
+      "sha256": "680c9feff91422ddb37a98f5f344dbc65494f95395494708e145a200ae73c27b"
+    },
+    {
+      "path": "demo/demo-client.js",
+      "bytes": 5555,
+      "sha256": "d0f52618d8d1a5fa163b487677f84461064c135ec868ad378f5e10069a7a575c"
+    },
+    {
+      "path": "demo/demo-guide.js",
+      "bytes": 5631,
+      "sha256": "c77ec3cbd936c6573ce37133423ca8b8ba5570b0812bec5b4aaa02c8168f4626"
+    },
+    {
+      "path": "demo/demo.css",
+      "bytes": 3981,
+      "sha256": "7c271aa4fea03c28e0d7fd0db1b458b018b91389c48e1adce2e3b86909c670d9"
+    },
+    {
+      "path": "demo/fuji-konbini-picnic-demo.mp4",
+      "bytes": 14163417,
+      "sha256": "286cfe1fe865be97e156852ec19c2c3806d71e8d495cc2127a5685164579d531"
+    },
+    {
+      "path": "demo/picnic-evidence.js",
+      "bytes": 1791,
+      "sha256": "847bec4da84e401a81781e15b0a26aae4ecc4630fbd62f7c4e39077d77e8b98d"
+    },
+    {
+      "path": "demo/picnic-poster.jpg",
+      "bytes": 244581,
+      "sha256": "e82981dc2d6c7762f37310d8dc1ff505f0cff19c7663758bcf3ab471902d008e"
+    },
+    {
+      "path": "demo/picnic-session.json",
+      "bytes": 7748,
+      "sha256": "b5ed2135ae277aac9a30c31030ea7cd8d682e9a37372d283c9c52261017fc29c"
+    },
+    {
+      "path": "demo/scenarios.js",
+      "bytes": 14761,
+      "sha256": "da26094874d3d257a0fd106a9cdf39c65d52d5f9624ee932d24b7ef4644a8bfe"
+    },
+    {
+      "path": "demo/watch.css",
+      "bytes": 2170,
+      "sha256": "c032bbf034a0b8ef3aac654a4128fb3fd6aefe7cf8ef6618710d5044fe3b60d4"
+    },
+    {
+      "path": "demo/watch.html",
+      "bytes": 2872,
+      "sha256": "52e0847ba31f202fd9d2c9180c3e8d9ddc94aa386edc47c2211f18f08c0bde9e"
+    },
+    {
+      "path": "demo/watch.js",
+      "bytes": 3935,
+      "sha256": "ad291c18ba37fcad4af3144a501addbf8d9e795326830a44c9c770598c616345"
+    },
+    {
+      "path": "src/catalog-panel.js",
+      "bytes": 8425,
+      "sha256": "4fc780445c0ae9359984b14476acbb9f8c58934d0a74451debfda0cdd42c1f5b"
+    },
+    {
+      "path": "src/clerk-ui.css",
+      "bytes": 30823,
+      "sha256": "b7ae558a870a8055e2029e613e9635e1f379a6e11a92488261263116a8a7de9f"
+    },
+    {
+      "path": "src/clerk-ui.js",
+      "bytes": 26594,
+      "sha256": "710a21f15b2fa03b1be3b66f9b0296a632f098eb349280e15f1a8c8367c7b87f"
+    },
+    {
+      "path": "src/product-catalog.js",
+      "bytes": 1029,
+      "sha256": "b429dddb14a299bb2da523cd7f0e055d3f2e0b1be96c509115075d26eb0b1056"
+    },
+    {
+      "path": "assets/audio/CREDITS.md",
+      "bytes": 799,
+      "sha256": "6384ea94ba7df07bed7041a64a693ff2fa43047aa452f29e358558c2a5f6dc59"
+    },
+    {
+      "path": "assets/products/chilled--1_01.png",
+      "bytes": 64644,
+      "sha256": "7796125ea96b67ad8d3d75f5a8fc0ede6b77ca988b88c2a9e74050bcc2bb6af3"
+    },
+    {
+      "path": "assets/products/chilled--1_02.png",
+      "bytes": 68691,
+      "sha256": "365db6b4ab61f9f9c7521751f192d17a61df322b6f310015de4e29a62ef4d29f"
+    },
+    {
+      "path": "assets/products/chilled--1_06.png",
+      "bytes": 47818,
+      "sha256": "b635227f518e538d492f14bd8589a0deb10cc85d5605a27c39de528a46606a11"
+    },
+    {
+      "path": "assets/products/chilled--1_07.png",
+      "bytes": 46311,
+      "sha256": "38eec04a702de5c0ba4596fd21bd021f41771ca42fcec79bdf25078078f1a700"
+    },
+    {
+      "path": "assets/products/chilled--1_08.png",
+      "bytes": 47733,
+      "sha256": "bcc951c277215eea56f4fd0cfad0f0552ac5de036476ce8a500e315301fc101c"
+    },
+    {
+      "path": "assets/products/chilled--3_01.png",
+      "bytes": 42267,
+      "sha256": "6b60bac0fd595a752580c617f241c8b4fb2135b306de1ede9e260e2e4d61000f"
+    },
+    {
+      "path": "assets/products/chilled--3_02.png",
+      "bytes": 43200,
+      "sha256": "f5e72364d36de63a27ea547403c6747a56a0b6266cec2b74da735afc73cf197b"
+    },
+    {
+      "path": "assets/products/chilled--5_01.png",
+      "bytes": 95640,
+      "sha256": "ebc1fdd4b9700edcabc6bbb6ad87340ece406a4fc12a9be97f03885d6fb14725"
+    },
+    {
+      "path": "assets/products/chilled--5_03.png",
+      "bytes": 71376,
+      "sha256": "2bab5be31dcbb7f98a8c8c84b3c2764b348061366ae8112b051f780485e5d420"
+    },
+    {
+      "path": "assets/products/chilled--5_13.png",
+      "bytes": 52779,
+      "sha256": "02a799a4f04c6026bc6425346a19f7aac73c8bc121e7b49b9bbce4b3c711da84"
+    },
+    {
+      "path": "assets/products/drinks--GREEN_TEA.png",
+      "bytes": 34396,
+      "sha256": "ad493003b61a612fde58e70eb444d58aa08a1b638d0c92c4222e63199cfc56d5"
+    },
+    {
+      "path": "assets/products/drinks--WATER.png",
+      "bytes": 31710,
+      "sha256": "be10661a7e32fd7fc68660c3a0a739ffa215a7ac6e5c51ddc611ec2593bc9f24"
+    },
+    {
+      "path": "assets/products/ice_hd--green-tea.png",
+      "bytes": 80834,
+      "sha256": "9117c5496c525b84d1f6d3cb6f3dbec0e5ccb96db7e8f21d8746f16bc324390c"
+    },
+    {
+      "path": "assets/products/ice_hd--vanilla.png",
+      "bytes": 76044,
+      "sha256": "610166c5f6a1c3189a77b628d24966bb8f220b41342fa77d806f978752c54e56"
+    },
+    {
+      "path": "assets/products/checkout-v73/BATTERY.png",
+      "bytes": 115727,
+      "sha256": "9094f85b7cc74361db690b7b8348cc11c69f48497532b390d47f0c458268440c"
+    },
+    {
+      "path": "assets/products/checkout-v73/CHARGE_CABLE.png",
+      "bytes": 114434,
+      "sha256": "4e17ae6d6d09ccd44c63816ecf85f617d665e9ff4a14366d155244fe3c849b5b"
+    },
+    {
+      "path": "assets/products/checkout-v73/CHOCOLATE.png",
+      "bytes": 123010,
+      "sha256": "986ebe07094fa17557f955e67cbc176b65d8b9d5ba3d4063e6e652a843661708"
+    },
+    {
+      "path": "assets/products/checkout-v73/FRUIT_CANDY.png",
+      "bytes": 144429,
+      "sha256": "bdeead0fc7b25549311539bdb66dc5bae267008e947f8221ec7b7145034a38f3"
+    },
+    {
+      "path": "assets/products/checkout-v73/GIFT_CARD.png",
+      "bytes": 105728,
+      "sha256": "0ce9bb702a8fd8bf3961c3ab210b44138b2b9112a3413d79fcb721fb740112eb"
+    },
+    {
+      "path": "assets/products/checkout-v73/GUMMY.png",
+      "bytes": 144478,
+      "sha256": "881b294b9639f0ff3e3942c1d69c0959fc9654b74b1e011c0e5d21bffc0619b3"
+    },
+    {
+      "path": "assets/products/checkout-v73/MINT_GUM.png",
+      "bytes": 141904,
+      "sha256": "08f44f99f869650c667103944a064352043ca378c6d886397173bbf22881af5c"
+    },
+    {
+      "path": "assets/products/checkout-v73/POCKET_TISSUE.png",
+      "bytes": 110025,
+      "sha256": "01fcfb7a3219f8e64169b9f598cf8a418a98cadef8b5444d8bd6fb1acbdce1b2"
+    },
+    {
+      "path": "assets/products/labels-v23/drinks-approved.png",
+      "bytes": 1559459,
+      "sha256": "3af18d034bdeee8b7dce3db7907d672eb26737cfef1145f5045ef9044dd655de"
+    },
+    {
+      "path": "assets/products/labels-v23/icecream-approved.png",
+      "bytes": 1721868,
+      "sha256": "dded40147395413920d9d9e0882d618529872b6a1abc35476aa39830bc1695ac"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--APPLE_PIE.png",
+      "bytes": 59053,
+      "sha256": "4a10cdf996046974fc6e9759f3fad63fdc3a1bdcfc3c919be5c575b8cef0ea09"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--CHEESE_DANISH.png",
+      "bytes": 59685,
+      "sha256": "aa5debccecfd11b4577239c40edbc6313d508bc7c613a4b76d4e449c31c8191e"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--CHOCOLATE_CORNET.png",
+      "bytes": 56106,
+      "sha256": "1698285d49fab79615f8e4bf1e220de62f719f064d0ba49a1185d97e6f0cd446"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--CHOCOLATE_DANISH.png",
+      "bytes": 75469,
+      "sha256": "de02b104409d2ba3bc7efe2d77053e0e1b31d10b2f6f9672092db8be45a505fa"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--CINNAMON_ROLL.png",
+      "bytes": 64231,
+      "sha256": "f5485797a4be3cb5d51df5eef19cd46aff9cd8951c3ccf85a8345d848dae3145"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--CREAM_BUN.png",
+      "bytes": 64327,
+      "sha256": "6aed46b4fdaf92945621857fa1dfef0d222346b3a9a09cdbecf8ec760f103f1e"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--CREAM_DANISH.png",
+      "bytes": 71159,
+      "sha256": "eb27f62c9d4f90e6f898bc872ffbc2acb410f205e9d26f26beaa90213bbcc95f"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--CROISSANT.png",
+      "bytes": 57270,
+      "sha256": "295046fd93db44a3f7b7a890788dc778a140a7947b1b7998401b74de9788f8b3"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--CURRY_BREAD.png",
+      "bytes": 61045,
+      "sha256": "127790bfecb536b9287b1a35297bdee5017e22ff019627ddd2dafa07299f432d"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--CUSTARD_BUN.png",
+      "bytes": 65430,
+      "sha256": "6899fecea5dcf8dd5bdaad95814a8cadb70f3acc261d3b63c83c1b0045a1d792"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--EGG_SALAD_BREAD.png",
+      "bytes": 68248,
+      "sha256": "d15644acf7e4d88f39ac54228ab2c63564bf780319c5024ab7e1d51d5664af14"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--FRENCH_TOAST.png",
+      "bytes": 69966,
+      "sha256": "2307b031b07e5d46a723559a76db36e4c38f9563c38b53c4879a291ed682b9ce"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--GARLIC_BAGUETTE.png",
+      "bytes": 66648,
+      "sha256": "08597b351389bb3726ffa0a8915dc753516c9fd6da473797777931c60667208c"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--HAM_CHEESE_ROLL.png",
+      "bytes": 75202,
+      "sha256": "1b254f26f9e2fead0a1caa931c0ad2dcc3767f808763343be6b9c47bfa2d11e0"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--JAM_BUN.png",
+      "bytes": 69275,
+      "sha256": "bc47014224eff0c92b6699b38e3210321315a07090c3948aee37a2a09cbe6202"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--MAPLE_ROLL.png",
+      "bytes": 74819,
+      "sha256": "e1dfd0781b322e0330042156e382fd28edd4bdb1de0d1ec5fb6b835c5f7cba5c"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--MATCHA_MELON_PAN.png",
+      "bytes": 83159,
+      "sha256": "8d01713ecdade6d640d78c5489092b8bd0f427c825fe2a4270ed98d5101699ba"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--MELON_PAN.png",
+      "bytes": 66419,
+      "sha256": "1a5015f0c9e99e6d8d80b4380c57a3fb181b826caf5749ecaa30f67b379ce72e"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--MENTAIKO_BAGUETTE.png",
+      "bytes": 57159,
+      "sha256": "92d12278477e1c0f60a8d567197c2fd780e79abf49621401a3e1c5b9fc140677"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--MILK_CREAM_BAGUETTE.png",
+      "bytes": 63232,
+      "sha256": "e5d93d4a0c9b10582b6d9d84ab9c94f4d2a6551bafbb6a29677c82c1e1e3f593"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--PANCAKE_SANDWICH.png",
+      "bytes": 63807,
+      "sha256": "46215a8e6e7a5b6a32d85c9f8c4b3e2ee5176124cd98f3688cef54bb95e6ff66"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--PIZZA_BREAD.png",
+      "bytes": 76628,
+      "sha256": "17cf61c808e3da83f72c505206d51289c4996223ba67da248b495c1884c98560"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--RAISIN_ROLL.png",
+      "bytes": 72211,
+      "sha256": "80e9726bc2cc86b8074955628c0968e52b8eef15bf48bd9cbae3bdedc4c0413a"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--RED_BEAN_BUN.png",
+      "bytes": 58627,
+      "sha256": "164120afeb19fc2acb5bb26e27567ae0e5b920ee3df765d9c6225bb5c54e3629"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--RED_BEAN_BUTTER_ROLL.png",
+      "bytes": 60316,
+      "sha256": "999074a11831bbde596c28be0c189d8ccb89a120f5499447bca7fe9d35527b1f"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--SALT_BUTTER_ROLL.png",
+      "bytes": 69417,
+      "sha256": "74db646fb52070edc5fd33f1ad07f96d0ee0a0771fba3721fa039a274833e4fe"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--SAUSAGE_ROLL.png",
+      "bytes": 53731,
+      "sha256": "0509733361f040ed46a6bd50d9f71e5449a5baa2d52f6b1c9e5d558c6bdcc3c0"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--SLICED_BREAD.png",
+      "bytes": 50799,
+      "sha256": "074b58863f1de60142a7e246ed85fae852d461c0ee7a8ceacb9169d0c27cff9b"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--STEAMED_EGG_CAKE.png",
+      "bytes": 60131,
+      "sha256": "9ac8dadda8dd32132868813840985b95f929075c4eae79fa026af5db196bf733"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--SWEET_POTATO_BUN.png",
+      "bytes": 66170,
+      "sha256": "a3b4da9d743516675f2a89bf8b356a9c5f1468a8c208b0c4229d185606d9840b"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--TUNA_MAYO_BREAD.png",
+      "bytes": 74205,
+      "sha256": "325e7e1372cc807ba03cbcaff695339532c5032f5dccdc9d70e8413f88c809c4"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery--YAKISOBA_BREAD.png",
+      "bytes": 64437,
+      "sha256": "070a15fe70a4fa9cd5901835b87d98131ec07fbf469a2d2943081d4d41b237ab"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery_endcap--CHEESE_DANISH.png",
+      "bytes": 61023,
+      "sha256": "db69987b5bc9583333eeb461c1459d14313678e5af20c7dc1a6648506272ca4e"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery_endcap--CHOCOLATE_BREAD.png",
+      "bytes": 59840,
+      "sha256": "b2f0f8da3a107ef9932965eb37e41f4c3b4b62d93af45848976a1fa236bdd542"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery_endcap--CHOCOLATE_DANISH.png",
+      "bytes": 70905,
+      "sha256": "f19aaa2f8f863bf5031c8aa6d380adcc9726aca562c2fc19d3c84adf9e8ed683"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery_endcap--CREAM_BUN.png",
+      "bytes": 55967,
+      "sha256": "62a5d422ff7f1caffb5b72d809ed46f8e71cf579b03831242b210d4d8d9671e1"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery_endcap--CROISSANT.png",
+      "bytes": 61397,
+      "sha256": "5f142e14840b081378e011a894a86e31b2aba08acfec3c550f13f5bcbb6f9bc3"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery_endcap--DINNER_ROLLS.png",
+      "bytes": 53822,
+      "sha256": "40ec15562ed31f74e9964bdd99a4a73e34b8022c480b78f6ef6f112b9f35722a"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery_endcap--MELON_PAN.png",
+      "bytes": 60352,
+      "sha256": "f1f87ba0626937e1cce26f822d9d604ee4b8f20f85bf10de4a54d6251b7c80dd"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery_endcap--SLICED_BREAD.png",
+      "bytes": 51759,
+      "sha256": "b848bfab8fb7bd85eeadc0cf58f5bcc46304108223b58d9096a3b44919725560"
+    },
+    {
+      "path": "assets/products/supplied-v72/bakery_endcap--SWEET_BEAN_BUN.png",
+      "bytes": 44503,
+      "sha256": "a96955238bb5c39f0db29bff5a886ebea25b856135e366939f2225f444ede3eb"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_01.png",
+      "bytes": 70070,
+      "sha256": "ae4b579a3f56db0a37eb2e01d79ff5ca3a9de9d5f89150f6434eb41a0f708c3f"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_02.png",
+      "bytes": 69875,
+      "sha256": "cf603585f68221be80daed5aba23d57d22cc99c9a4a1acd95b19c0f9aa05a9cf"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_03.png",
+      "bytes": 68012,
+      "sha256": "6e8b51df7af982f91c931f5094a0fea7d6921dda346bcedfcfbaa854cb485a06"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_04.png",
+      "bytes": 88058,
+      "sha256": "c8e4baf78b13148bb3660c6713bafaf9d512d52e729c24733aa62ca0876d0f42"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_05.png",
+      "bytes": 85043,
+      "sha256": "523703dcb22c9fb116587adf45e4e63045b136726425b608212758b2ce7137c5"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_06.png",
+      "bytes": 83708,
+      "sha256": "305023a0005705873746d60db892ecac5bf31e82380d3c077be35685d11eb8c1"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_07.png",
+      "bytes": 69000,
+      "sha256": "842b9739bb07cf736260da45df362f4f5c45a35636a43c125f4f3320d198b1d2"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_08.png",
+      "bytes": 71876,
+      "sha256": "45a6d4fc6e13a007fdc5b0252cefd7860a8ee2cf7b59772106aa541166d0ef60"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_09.png",
+      "bytes": 71015,
+      "sha256": "1679892b5eae3e4592fc3976e7ccc36157541e9ea49b3e303fc02a1bbf2db256"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_10.png",
+      "bytes": 72611,
+      "sha256": "7e2421919335ab72ba1463b9838434c37845af394218cf21c417d33277084fda"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_11.png",
+      "bytes": 73076,
+      "sha256": "4cd5a27db8f377c3081671da04f68c2f4c96e0bd09e0c26a2c484cf56deae590"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_12.png",
+      "bytes": 77843,
+      "sha256": "1ddf6ca4601d678d4b85125ec189f3c482cf370517863911b2dc28fbab02dda2"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_13.png",
+      "bytes": 83943,
+      "sha256": "81b331fe3e08390aacc62ff7ec65d2d80a5fa41e3622ac97fd2db4dec28a8207"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_14.png",
+      "bytes": 72589,
+      "sha256": "585692e78ef7abc6cdab28dda823d65ee7099b090be81aaad900bcd051c62955"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_15.png",
+      "bytes": 86671,
+      "sha256": "63a0c154b2b280ac9e1c2a7c52af2e37fb9edc149bda85edba0d55f107a3ebce"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--2_16.png",
+      "bytes": 84158,
+      "sha256": "ff54f0d7b32daeac5e93e6aa85bcdd4cc25d9d83fe12a47ebc31dd0e0cb1d976"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_01.png",
+      "bytes": 73880,
+      "sha256": "2d7d7af5b2cd9fb4ab9aaff58857eab9a8a53ec91f2c8c0bc0acad41792b8769"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_02.png",
+      "bytes": 74595,
+      "sha256": "9e50a432511ec480b95bf876fe2de4c62afcc908c326482ce1a3aa3ec235d167"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_03.png",
+      "bytes": 69460,
+      "sha256": "70e118cfe5fbb9ec72d5915a9c437832fb7ab774f63e4d08a36139621e89f13f"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_04.png",
+      "bytes": 74975,
+      "sha256": "c1b9180f00359d57b60a8482d84b3a82f4497f5c61cea0b6ff7d33b1d3e870a2"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_05.png",
+      "bytes": 78898,
+      "sha256": "1c1196ac2782a46a491ed3f5a43c466db89e93aa29a7814b49824ab6fc81b95c"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_06.png",
+      "bytes": 75517,
+      "sha256": "a3fd612438adfe042249067848467ed67bf752c7a9aca07d763f98cd2de297fb"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_07.png",
+      "bytes": 79779,
+      "sha256": "06b36634975788f951f0173bd5c8cf677534c5ffe7f406eecd103a1cb17c50c6"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_08.png",
+      "bytes": 77619,
+      "sha256": "23a113cceee35b5e84e8051e85a68d2969b7299b2f79a35ec9ef8bdeecfb69ad"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_09.png",
+      "bytes": 71784,
+      "sha256": "0b4c9d5d934e303dec4790b91449373761ce984f800446f37255a9aa18636dbc"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_10.png",
+      "bytes": 77278,
+      "sha256": "919dec7507e1a55d924cc6080cafeeaf4a071eb84f336407d7c44501f89567ab"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_11.png",
+      "bytes": 79653,
+      "sha256": "8f5ba61831b8a3c719259904c495a50bcad7d729c75597f52065f4ed9b6f2a15"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_12.png",
+      "bytes": 78845,
+      "sha256": "34f4577959de144398443cd7990b8a18a5c86d1d6cbb426268006a0618909bef"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_13.png",
+      "bytes": 81135,
+      "sha256": "9e3deadddeafb19b36e99220ace947276ad70dfc5b1703f4526151c3a15ae524"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_14.png",
+      "bytes": 83839,
+      "sha256": "1543569a5ea846c16d111e45cfb71cfa03477f2a3f592091d807435f6d1b2460"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_15.png",
+      "bytes": 77619,
+      "sha256": "34006a831ce6b2075c6d3c92d55923615d5f0d7d58b6b97207968af69317aad5"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--3_16.png",
+      "bytes": 81942,
+      "sha256": "e5a72409ca6951e5df5e933dfe0f411337bd321c0acca01fb8667f09f30fdd63"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_01.png",
+      "bytes": 66865,
+      "sha256": "d95b8df8bbdb03d26e0ad0f7fa7aea02927611059b4ee1245f14f7092d6f1bf4"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_02.png",
+      "bytes": 73187,
+      "sha256": "ce0e2659451893a1a5aff11b8cc7744507efb9c0706708faac7b11ebab01f32f"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_03.png",
+      "bytes": 69000,
+      "sha256": "4eeb0949aec94600b0466114f7c8449189e17fcd04a1cdaf0981298cba0e4046"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_04.png",
+      "bytes": 73753,
+      "sha256": "42c38eecc26e9b5f54c85e4d4cf7e10fc618829a80a941b02ac31a284965fe51"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_05.png",
+      "bytes": 75472,
+      "sha256": "d0d72e29c506aca311614630446a77243ef57ebfd3831d222344047f50e93ee3"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_06.png",
+      "bytes": 73991,
+      "sha256": "edb9a413cc11f829c663fbcbb65c3aa69cb95ed6e82ccfe4a9b47c8607c84d23"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_07.png",
+      "bytes": 74776,
+      "sha256": "dee63f8381ec09d7236d2059e36e2a644eee9ce795d516e6eca70eed7cfe7105"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_08.png",
+      "bytes": 77127,
+      "sha256": "81d4088a12d6bcf4cf92a23c84015e3dadfd93a4ba422ead7dbb5f51813ddd47"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_09.png",
+      "bytes": 67386,
+      "sha256": "3fd4c91e95800e848b61dbcf39d0115f8ea4b2e4a0604d63d62a251ce3894697"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_10.png",
+      "bytes": 86260,
+      "sha256": "72c775122564d2ff8c308470dfe5804662f0c4a382e49efce024de250d8c5a71"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_11.png",
+      "bytes": 86803,
+      "sha256": "c946f8e64b83668ba1999518556751dcf0944cb79bffa94634439a78fea443ae"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_12.png",
+      "bytes": 100316,
+      "sha256": "b1cde60290d8a7fcf290b022fbf4519afe20728736d1bfbf8b53af26a033f1a2"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_13.png",
+      "bytes": 68293,
+      "sha256": "ce8fb638fca0020880406d9c4ec0a5c4c953a25201b306ae05b332a7a9651c63"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_14.png",
+      "bytes": 63985,
+      "sha256": "261411aa048c52650b4002ef414ed07496e256d3a73bb884d6910dc6fb9488c6"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_15.png",
+      "bytes": 73423,
+      "sha256": "aeea8bbf4f72ad0e60e58a502af351d37ade5924b3aa1a6bfa88c5fc09621a94"
+    },
+    {
+      "path": "assets/products/supplied-v72/pantry--4_16.png",
+      "bytes": 70985,
+      "sha256": "de108c2b78900bf998c1850bba48bbad72bae9e6c80fb843a6eeb1cd9a092937"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_01.png",
+      "bytes": 65275,
+      "sha256": "5e9b34a426e92ca23fdc92fc65033d65dad332522afdeebcc7936f7f10c08cd3"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_02.png",
+      "bytes": 65533,
+      "sha256": "52bc87d17f5f853545a325c0feb9aa1650e0859542d6348ceb85da8f0c0e43cb"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_03.png",
+      "bytes": 63150,
+      "sha256": "fd35290bcf077f1fa30e7116c8b4d8b9b7a6d63ede63b632fe8e82c0c92cda5f"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_04.png",
+      "bytes": 72856,
+      "sha256": "6c63e15faf21df72f2510801082a4acc8cb17be7d14bddb44a210982ea84f6ac"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_07.png",
+      "bytes": 73725,
+      "sha256": "67fd7ce84673da4aa09d6db2cb982c4b77f20396a2fb268f346a9b0148ffa5ff"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_13.png",
+      "bytes": 72385,
+      "sha256": "6946cb2ea90d3a4fafccf76769f372053016fb80fb1c091632503246594e84e6"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_16.png",
+      "bytes": 75999,
+      "sha256": "9fa6ff42757b4705f69196718dc7e127b675e9719abedac9dddbc523ef7a470a"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_17.png",
+      "bytes": 72665,
+      "sha256": "0dd13be38e7acfb108f52d15462e9e0b5993fe1f97f1f5bd2580a92a43ea93a4"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_18.png",
+      "bytes": 73284,
+      "sha256": "83ff75d665cd63a09aedcdda9466c3919d8bacdac7d84d6626fc4a8d9ec84221"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_25.png",
+      "bytes": 73464,
+      "sha256": "226246e871435e7f9a12e1a506488b471f522d15cafa344d546d046756a95cf5"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_26.png",
+      "bytes": 71780,
+      "sha256": "1faf8038db09c4587efdf811a67bd40480b149bb2b15c581181fd6fce077c15e"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--KEPT_27.png",
+      "bytes": 68457,
+      "sha256": "24f160dccbd6b0649d50faeca5b70fe7bbcc636ace4a6e0cb399e24a0f50e5e2"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_01.png",
+      "bytes": 50126,
+      "sha256": "df68a8744bcb7baa425207476af68c1c4893115a8674c51d058a8548d8397d80"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_02.png",
+      "bytes": 49626,
+      "sha256": "499873e214aaaf883a13953ba91e6b9b41bfaea75a255af7794ea0d3fae38c33"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_03.png",
+      "bytes": 60787,
+      "sha256": "10a636673dc5435e00e26b5e1310a1504b7344d66f870aae53f88f4d03d23a8d"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_04.png",
+      "bytes": 73672,
+      "sha256": "95288725ee15ccbf462b6219d7dabbb7905060f433a0534e4f027448ba31f79c"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_05.png",
+      "bytes": 60317,
+      "sha256": "222edfb39dec635e04185a315f8b1ab54cadd8edda47bf2d74b01824b0915f5e"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_06.png",
+      "bytes": 49129,
+      "sha256": "ae6d6e2abfab3b8b51cb69cf27ebbc5ce0a140f91616da744cf2a0ba238600e4"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_07.png",
+      "bytes": 59703,
+      "sha256": "fc7ed234a1b756168d03349d6ebc3e34ab9b40fe20a53a12be87e5350e8e16d6"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_08.png",
+      "bytes": 60817,
+      "sha256": "f681617589cdf8af0f12f45778d4c8cb527cfb544021d5bf514872faf78e7767"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_09.png",
+      "bytes": 63997,
+      "sha256": "eb9dad72aac3be4c9d402a21aca4a0b3581a7afe1b6b49ced026419993f42481"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_10.png",
+      "bytes": 53137,
+      "sha256": "ab1bbc015350b03e4ca56fa1317e28c822189937cc363f1792784f9ef769c4a0"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_11.png",
+      "bytes": 53281,
+      "sha256": "fe9b8b537938abe370310e5a7f96eb03d85b8599248beb16fd37db52357779ec"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_12.png",
+      "bytes": 76365,
+      "sha256": "11790cdfffdab4c4bb5ef66055b10fe7cfedfa2791af1c26ca38789b73382558"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_13.png",
+      "bytes": 78211,
+      "sha256": "062aca8fa74c962eb15da40bb7eeefdcac2eeb1e46c68e16195c3d1cf06aa633"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_14.png",
+      "bytes": 77565,
+      "sha256": "53173bf739799758579dc358228f0a5a1d07beeaa897e8226c78e09256f29f8f"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_15.png",
+      "bytes": 49682,
+      "sha256": "66d9dfac06c48ad18763bc05a54c04a388415b9de2267e1abc563607e5f26cd7"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_16.png",
+      "bytes": 69019,
+      "sha256": "64f41a7621d965a4c505459b1b81fd7adfca7511ddcf1c1486884cb5ae4cdbc1"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_17.png",
+      "bytes": 69426,
+      "sha256": "60a80c9b1a2f84c01cf8bdb480b7ec1762c3d151b377b84c5d0e98a89618abb3"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_18.png",
+      "bytes": 78269,
+      "sha256": "2d10c93680acf623d2aa9f7c42e276cc047e92d354a5fb30a330d326a8056c2b"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_19.png",
+      "bytes": 77115,
+      "sha256": "1b8a6e0d24db23bbba64b1240c7ea7ea941a22333e98ce09568641b0dc8ef183"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_20.png",
+      "bytes": 72257,
+      "sha256": "7415ad466f82b84d454300c98394c0059af1ae3ee9d2ea6077503aaa18db8a56"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_21.png",
+      "bytes": 75647,
+      "sha256": "5d588b41a2ea547fad33d109d644ae678e830609b9319b8c7c75bcaa7317d62f"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_22.png",
+      "bytes": 81941,
+      "sha256": "a921c4c7b817da6746d9ddc304424a4b22a4e889a1e48a740a25e45bf0737de3"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_23.png",
+      "bytes": 67376,
+      "sha256": "416351f9478cc765aa17b220758123b4a163a2337e86214eaf4c82636f885bff"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_24.png",
+      "bytes": 60623,
+      "sha256": "0d7bec862f3ce62df62b2f0e13c1d5f828225381e9faf7c9042c7ae12403aeba"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_25.png",
+      "bytes": 53838,
+      "sha256": "2df432a64a4c49bb93746aa4a565d1ac11b2c552068385f19d134d7b8bbd4097"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_26.png",
+      "bytes": 69377,
+      "sha256": "14495461fde715f0d1ad3dfdf17094459d44b0b19894ec4685ed81637843bcd9"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_27.png",
+      "bytes": 58452,
+      "sha256": "81ae9e29a0a3506c364d204c41b0e0d1f89b0411b5253c87239f3f5269b32325"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_28.png",
+      "bytes": 56500,
+      "sha256": "4759ea6b4b26881765755fdb389545bac507b2a782cea031fae12d9543c5e747"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_29.png",
+      "bytes": 54938,
+      "sha256": "dec6066b387846b9170d59363a307d7d7adfc2905e105090e623504c96770f19"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_30.png",
+      "bytes": 55836,
+      "sha256": "fdd1bd79158e18b5c0f32ed6bf390c3efa7da422806af1d1532cc4787b91123e"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_31.png",
+      "bytes": 63773,
+      "sha256": "9f713e5b12ba72626c6c468134235a3eb3456e6f909f44ae0ea08a3f61e8b5f7"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_32.png",
+      "bytes": 60854,
+      "sha256": "38423222b279768c230cbcca03a591384e11208fc3124a694bc517990c2266b3"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_33.png",
+      "bytes": 65939,
+      "sha256": "282d05eca3642b3a17d9a0a3c155f1badfa85ef9ddce57c86141d403cce124c4"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_34.png",
+      "bytes": 63262,
+      "sha256": "a0810bae362ed26cf2d616452020f9ec0da6ed548d79a6fe72ea308761276248"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_35.png",
+      "bytes": 65536,
+      "sha256": "bee35df50f7512ecfd0f091a6d076574cf442a7376fd0bc4949f40ececccf418"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_36.png",
+      "bytes": 63939,
+      "sha256": "7eb8fadc838dd916a3f9009f7ce0b5a5d5ce02718d4fabfe00f37bdd29b45724"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_37.png",
+      "bytes": 64732,
+      "sha256": "e6cff6470661da9cda5a364bf154405e6ea1a95432b23e994fc66b914a769b5e"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_38.png",
+      "bytes": 63818,
+      "sha256": "8e3b714176cf6fd75f9f35eb32f8a4a0f1a72384bf588ff13a91bcbbdb3b4562"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_39.png",
+      "bytes": 45571,
+      "sha256": "54b36f8707935c08d8d0ca44caf488ded4dca50ce010a45dddab4ae5ca176ce3"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_40.png",
+      "bytes": 67102,
+      "sha256": "f7471b36c4afba4d1b6e8854394706117e4b4d89f641c911564b8724d4e44b30"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_41.png",
+      "bytes": 66772,
+      "sha256": "d7834c06be6183ec8199f784accebe08636b5c021343817279acd4cc2a054552"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_42.png",
+      "bytes": 66463,
+      "sha256": "ffca29407069ed5b2f164babefb5683aae9fce9a898aa414f608b5c1e76b93dd"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_43.png",
+      "bytes": 72549,
+      "sha256": "33b0bf42d3aa941f6228f7f5244f260843430e42ac50b80f1eace50b232fa53c"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_44.png",
+      "bytes": 68650,
+      "sha256": "6d48e19d7ada1982feafc168ab5e89068ad3ee6f5b59de16f9e84b8887d4e4a0"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_45.png",
+      "bytes": 61820,
+      "sha256": "3f37553380322569dab7ad3e355963ae1d5de4ff6698413ee48e5a6ffd8eab63"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_47.png",
+      "bytes": 72419,
+      "sha256": "f7cc549c0fe10fb853908f8106ec6c15bc3ce99f3d8517528f4a7cb50b22f486"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_48.png",
+      "bytes": 59179,
+      "sha256": "82ebde54fd3ba4116330a76e6745d51c9b739b030ae20ba9cde480b5a63c150d"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_49.png",
+      "bytes": 61525,
+      "sha256": "5148b8360bac64e6775da8e97b3fd2c0dcfc1fe425fbfdf26afb9a4a3a4f3857"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_50.png",
+      "bytes": 67759,
+      "sha256": "8f02f7d765ec316bdca88212325bc9a361daec7fa9190f04c7123e3fd0295073"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_51.png",
+      "bytes": 71151,
+      "sha256": "e7553b069f65cc7f69001d92666d39341ee0db37af565df4b756e8cc2cd00382"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_52.png",
+      "bytes": 73911,
+      "sha256": "3cc532ca45f4cdc3cde510edd9374137a3f9aa6beb1b9188c2189954b21f1992"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_53.png",
+      "bytes": 67360,
+      "sha256": "e3717df75abc64380131b6f55d0bafd8e4e61514f5ca55d16481abf1eb53f9ee"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_54.png",
+      "bytes": 55937,
+      "sha256": "35f2d1db5e2e68d2aaf37673382538078e2c36400318546eed0d89dedffc983e"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_55.png",
+      "bytes": 58872,
+      "sha256": "6111d0811047e7dd7236d2acbce2bd768c1e4e8f82dac2557f940e1321a6b8b8"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_56.png",
+      "bytes": 59983,
+      "sha256": "b03036d7988171778dcdec7fa8a9f63c5faa40e5e58d7f2e327adc484ed9f736"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_57.png",
+      "bytes": 57001,
+      "sha256": "741ae153a3688a47891b31b316a5a7e858a01a5e861abc98888aef8cfac2b9e8"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_58.png",
+      "bytes": 57491,
+      "sha256": "5708d2285bf31962a88cd1c52d8abbb6261c9d967669a48f097f5068a58a02cc"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_59.png",
+      "bytes": 61321,
+      "sha256": "a9e0ca0df0fce7f64174adfd6d04d2d9dd44387621ea9a3e582a65d305da3154"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_60.png",
+      "bytes": 59799,
+      "sha256": "96c8db41c083e1d12df5d59dd2b41277cb48b8aa0f2a084125962db027a7d969"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_61.png",
+      "bytes": 66925,
+      "sha256": "e75a62decd3e548121cd0a68cf10928e03c8de5b2db5954fb0b6d14e2db2a7a4"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_62.png",
+      "bytes": 59018,
+      "sha256": "e9d0b1859f69686e030edc6bc4f96e8f81470188dce26494971fb772d80bdd87"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_63.png",
+      "bytes": 52052,
+      "sha256": "1f2f824e3629c8f060f3cc261a73a10660c6ffb3899278ab3ee9ae8fe1937dec"
+    },
+    {
+      "path": "assets/products/supplied-v72/snacks--NEW_64.png",
+      "bytes": 61835,
+      "sha256": "8e1d11a3c826e1011dd375b4b6c620796a01458d95e011502d38021880d70606"
+    }
+  ]
+}

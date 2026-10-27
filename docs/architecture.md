@@ -2,7 +2,7 @@
 
 The browser loads vendored Three.js scripts and the files listed in `web/index.html`. `app.js` coordinates the outdoor scene and the store. `src/blender-scene.js` loads the checkout base scene; individual station modules load the newer coffee, food, shelf and floor layers and remove their replaced objects. Loading older complete-scene exports alongside these layers would duplicate or regress the scene.
 
-`navigation.js` owns the single first-person walking camera and wayfinding. `store-clerk.js` adds the cashier and nearby conversation entry. `product-catalog.js` maps catalog nodes to the loaded scene, while `catalog-panel.js` and `clerk-ui.js` handle cards, browsing, conversation and basket actions.
+`navigation.js` owns the single first-person walking camera and wayfinding. The 3D cashier and its nearby conversation entry were removed on 2026-10-26; the 2D clerk panel remains. `product-catalog.js` maps catalog nodes to the loaded scene, while `catalog-panel.js` and `clerk-ui.js` handle cards, browsing, conversation and basket actions.
 
 The browser client `clerk-api.js` calls the same-origin Node server. `server/clerk-server.cjs` serves only `web/`, handles request limits and diagnostics, and selects the configured model adapter. The credential files sit outside the static directory.
 

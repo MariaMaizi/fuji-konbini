@@ -2,6 +2,13 @@
 
 [简体中文](CHANGELOG.md) · **English**
 
+## Daytime picnic Demo and creator credit — 2026-10-27
+
+- Published a separate static Demo with eight prepared multilingual scenarios and a three-turn picnic flow: retain, add and replace, with timing, storage and nutrition trade-offs. The live Agent's direct model logic is unchanged.
+- Added the 113-second webpage recording, seekable player, Bossa Antigua music and by MariaMaizi credit. Prepared replies and simulated data are labeled; recording makes no model calls.
+- Removed the 3D cashier and nearby-talk button, preserving the 2D clerk panel, first-person exploration, cards, Find/A* and Basket.
+- Added a reproducible build:demo overlay reusing original GLBs. 203 existing offline regression checks and the 603-product asset check passed; three obsolete tests covered only the removed 3D cashier.
+
 ## First-person exploration — 2026-10-25
 
 - Standardized indoor and street walking on the first-person camera; removed customer avatars, style selection and viewpoint switching.

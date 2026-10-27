@@ -24,3 +24,6 @@ Thumbs.db
 *.7z
 *.bak
 local-only/
+
+# Generated static Demo review build
+/dist/

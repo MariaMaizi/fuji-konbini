@@ -221,9 +221,7 @@
       camera.position.set(4.1,navigation.eye,.75);camera.lookAt(-5.25,1.45,-3.35);camera.fov=74;camera.updateProjectionMatrix();navigation.syncAngles();navigation.updateUI();
     }
     if(Fuji.loadProductCatalog)await Fuji.loadProductCatalog(world);
-    if(Fuji.installStoreClerk)Fuji.installStoreClerk(experience);
     if(Fuji.installClerkUI)clerkUI=Fuji.installClerkUI(experience);
-    navigation.storeClerk=experience.storeClerk;
     if(new URLSearchParams(location.search).has('test')) window.__fuji=experience;
 
     requestAnimationFrame(() => {
@@ -733,7 +731,6 @@
     updateRain(dt);
     navigation.update(dt);
     if(clerkUI)clerkUI.update(dt);
-    if(navigation.storeClerk)navigation.storeClerk.update(dt);
     updateRaycast();
     if (cloudGroup) cloudGroup.position.x = Math.sin(clock.elapsedTime * .08) * .42;
     if (starSystem && starSystem.visible) starSystem.rotation.y += dt * .003;

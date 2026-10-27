@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node server/clerk-server.cjs",
     "test": "node scripts/test.cjs",
-    "check": "node scripts/check-assets.cjs"
+    "check": "node scripts/check-assets.cjs",
+    "build:demo": "node scripts/build-demo.cjs"
   }
 }

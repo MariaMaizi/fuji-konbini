@@ -1,0 +1,13 @@
+#store-music{position:fixed;right:max(22px,env(safe-area-inset-right));bottom:max(22px,env(safe-area-inset-bottom));z-index:600;display:flex;align-items:center;gap:2px;padding:3px 5px;border:1px solid #adb8a1;border-radius:28px;background:#faf7ee;color:#36523d;box-shadow:0 4px 20px #2536251a;font:13px/1.4 'Segoe UI','Microsoft YaHei',sans-serif}
+#store-music button,#store-music summary{min-width:44px;min-height:44px;border:0;border-radius:22px;background:transparent;color:inherit;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font:inherit;padding:7px 10px;box-sizing:border-box}
+#store-music button:hover,#store-music summary:hover{background:#e4eadc}
+#store-music svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+#store-music .music-waves{display:none}#store-music.is-playing .music-waves{display:block}#store-music.is-playing .music-slash{display:none}
+#store-music summary{list-style:none;font:italic 17px Georgia,serif}#store-music summary::-webkit-details-marker{display:none}
+#store-music .music-info{position:absolute;right:0;bottom:calc(100% + 10px);width:min(280px,calc(100vw - 36px));padding:16px;border:1px solid #b3bea8;border-radius:16px;background:#faf7ee;box-shadow:0 8px 28px #25362526;box-sizing:border-box}
+#store-music .music-info strong,#store-music .music-info span{display:block}#store-music .music-info strong{font:19px/1.5 Georgia,serif}#store-music .music-info span{font-size:12px}#store-music .music-info label{display:block;margin-top:14px}#store-music input{display:block;width:100%;min-height:38px;accent-color:#405e44}#store-music p{font-size:12px;line-height:1.6;margin:10px 0 0}#store-music a{color:#31563b;text-decoration:underline}
+#store-music :is(button,summary,input,a):focus-visible{outline:3px solid #b98035;outline-offset:3px}
+#store-music.in-clerk-tools{position:static;padding:0;border:0;border-radius:9px;box-shadow:none;background:transparent;z-index:auto;display:block}
+#store-music.in-clerk-tools .music-text,#store-music.in-clerk-tools details{display:none}#store-music.in-clerk-tools button{width:44px;height:44px;padding:10px;border-radius:9px}
+@media(max-width:760px){#store-music{right:12px;bottom:78px}.clerk-tools #store-music{margin-right:2px}}
+@media(max-width:760px){.clerk-header:has(#store-music) .clerk-heading{padding-right:132px}.clerk-header:has(#store-music) .clerk-heading h2{font-size:18px;line-height:1.25}.clerk-header:has(#store-music) .clerk-heading small{display:none}}

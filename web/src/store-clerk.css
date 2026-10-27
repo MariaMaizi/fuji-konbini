@@ -1,5 +1,0 @@
-/* Store cashier interaction; first-person movement remains in the navigation module. */
-.clerk-nearby{position:absolute;z-index:4;left:50%;bottom:112px;transform:translateX(-50%);border:1px solid #a9bba0;background:#405b46;color:#fff9ef;border-radius:22px;padding:12px 20px;min-height:46px;font:14px Georgia,'Yu Mincho',serif;cursor:pointer}
-.clerk-nearby[hidden]{display:none}
-.clerk-nearby:focus-visible{outline:3px solid #b98035;outline-offset:3px}
-@media(max-width:760px){.clerk-nearby{bottom:210px;width:max-content;max-width:calc(100vw - 32px)}}

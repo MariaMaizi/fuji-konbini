@@ -11,3 +11,8 @@ The largest runtime model is about 72.5 MiB, so the initial snapshot can use ord
 `web/vendor/` contains Three.js and accompanying loader/control/geometry utility scripts. The bundled core header identifies Three.js Authors and MIT licensing. The MIT text is included in `web/vendor/LICENSE-three.txt`.
 
 7-Eleven and product names, packaging, logos and supplied reference artwork are third-party materials used in this personal prototype. No affiliation is claimed and this repository does not grant redistribution rights for those materials. No project-wide open-source license has been chosen.
+
+
+## Demo audio and video / 演示音视频
+
+Bossa Antigua — Kevin MacLeod (incompetech.com), [CC BY4.0](https://creativecommons.org/licenses/by/4.0/). See [audio credits](../web/assets/audio/CREDITS.md). The picnic MP4 is a recording of prepared example interactions, with bilingual captions and by MariaMaizi watermark; music level and fades were edited. Nutrition values shown are project simulations.

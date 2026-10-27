@@ -4,13 +4,13 @@
 
 通过 AI 店员理解自然语言需求，将 **603 个商品目录条目、518 个食品虚拟信息记录与 Three.js 场景**连接为“咨询 → 查看商品 → 定位货架 → 加入购物篮”的体验，探索生成式 AI 如何支持具体的选品任务。
 
-**简体中文** · [English](README.en.md)
+**简体中文** · [English](README.en.md) · by **MariaMaizi**
 
 [本地体验](#本地体验) · [核心体验](#核心用户体验) · [架构审查](docs/ai-pm/architecture-audit.md) · [产品正交图](design/product-orthographics/README.md)
 
 ![Fuji Konbini 实机截图：富士山下的 3D 便利店](docs/images/fuji-konbini-hero.jpg)
 
-*可本地运行的 AI 产品原型。截图展示原型场景；在线 Demo 尚未部署。*
+*实机原型截图。下方在线 Demo 使用预设问答；本地 Agent 支持配置模型后真实对话。*
 
 | 产品范围 | 当前实现 |
 | --- | --- |
@@ -18,6 +18,14 @@
 | 食品信息 | **518 个食品虚拟信息记录**，包含项目份量、营养、配料等数据 |
 | 核心闭环 | 对话／浏览 → 商品卡 → Find 定位与 A* 导航 → Add／Basket |
 | 语言 | 中／日／英对话；英文店员控件，日文招牌与包装，部分外围界面仍为中文 |
+
+## 交互 Demo / Quick Demo
+
+**[在线逛店](https://fuji-konbini-demo-preview.cozylamp129.chatgpt.site/) · [113 秒演示视频](https://fuji-konbini-demo-preview.cozylamp129.chatgpt.site/demo/watch.html) · [Demo 源码与运行说明](demo/README.md)**
+
+在线版是无需 API 密钥的**预设交互演示**：8 个场景提供中／日／英示例问答，商品卡、Find／A* 和购物篮可实际操作。真实 LLM 对话由下文的本地 Node 应用提供，两者明确区分。
+
+主案例用三轮“富士山野餐”展示额外决策价值：**用餐时间与步行安排 → 追加水果并考虑冷藏 → 将水果换酸奶、比较营养取舍**。前两件商品保持不变，最后只替换第三件；用户能查看合计变化，再 Find 与加购。四款数值来自项目虚拟资料，由 Demo 代码计算合计和差值；不代表实测营养、个人膳食需求或正式 Agent 已启用推荐排序。
 
 ## Product Problem / 产品问题与目标
 
@@ -38,7 +46,7 @@
 
 ![商品选择界面：商品图、Find 与 Add](docs/images/product-browser.jpg)
 
-用户以第一人称在店内探索，收银台保留 3D 店员。购物篮用于体验选择过程，没有支付和真实订单。
+用户以第一人称在店内探索，通过 2D 店员面板交谈；收银台 3D 店员已移除。购物篮用于体验选择过程，没有支付和真实订单。
 
 ## How It Works
 
@@ -100,7 +108,7 @@
 
 | 技术 | 用途 |
 | --- | --- |
-| Three.js / JavaScript | 3D 场景、店员、商品交互、A* 寻路 |
+| Three.js / JavaScript | 3D 场景、商品交互、A* 寻路 |
 | Node.js | 同源 HTTP 服务、模型适配与诊断；密钥仅由后端使用 |
 | 百炼 / Qwen | 当前配置为 `qwen3.6-plus`、`direct` 模式 |
 | JSON / GLB / Blender | 商品与虚拟食品数据、场景导出、模型与材质工作流 |

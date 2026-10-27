@@ -4,15 +4,23 @@
 
 Fuji Konbini connects natural-language consultation, **603 catalog entries and 518 virtual food records** to a Three.js store: ask, inspect a product, find its shelf and add it to a basket. It explores how generative AI can support a concrete selection task.
 
-[简体中文](README.md) · **English**
+[简体中文](README.md) · **English** · by **MariaMaizi**
 
 [Try locally](#try-locally) · [Experience](#core-experience) · [Architecture audit](docs/ai-pm/architecture-audit.md) · [Design references](design/product-orthographics/README.md)
 
 ![Fuji Konbini prototype: the 3D convenience store below Mount Fuji](docs/images/fuji-konbini-hero.jpg)
 
-*A locally runnable AI product prototype. Screenshot shows the prototype scene. A public demo is not deployed.*
+*Prototype screenshot. The online demo uses prepared Q&A; the local Agent supports configured live-model conversation.*
 
 **603 catalog entries with 3D mappings** · **518 virtual food records** · **Chinese / Japanese / English conversation**
+
+## Interactive Demo
+
+**[Explore the store](https://fuji-konbini-demo-preview.cozylamp129.chatgpt.site/) · [113-second walkthrough](https://fuji-konbini-demo-preview.cozylamp129.chatgpt.site/demo/watch.html) · [Demo source and setup](demo/README.md)**
+
+The online experience is a **prepared interactive demo** with eight scenarios in Chinese, Japanese and English. Cards, Find/A* and Basket work without an API key. The separate local Node application provides live LLM conversation.
+
+The three-turn picnic case makes the decision process visible: **meal timing and a planned walk → fruit and cold-storage needs → a yogurt swap with nutrient trade-offs**. The base two products stay selected while the third changes; visitors inspect the comparison, Find the item and add it. Demo code totals four simulated food records and calculates swap deltas. These are not verified package values, personal nutrition requirements or active ranking in the live Agent.
 
 ## Product Problem / Product Goal
 
@@ -33,7 +41,7 @@ The prototype serves **situational selection and store exploration** through two
 
 ![Product selection with artwork, Find and Add](docs/images/product-browser.jpg)
 
-Explore the store in first person and talk to the 3D cashier. The catalog includes 600 modeled product entries and three coffee services. Clerk controls are English, with Japanese signage and some Chinese scene controls. No payments or real orders.
+Explore the store in first person and use the 2D clerk panel; the 3D cashier has been removed. The catalog includes 600 modeled product entries and three coffee services. Clerk controls are English, with Japanese signage and some Chinese scene controls. No payments or real orders.
 
 ## How It Works
 

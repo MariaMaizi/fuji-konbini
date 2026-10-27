@@ -1,0 +1,210 @@
+{
+  "title": "白天野餐：让搭配有理由",
+  "author": "MariaMaizi",
+  "video": "fuji-konbini-picnic-demo.mp4",
+  "duration": 113,
+  "recordingType": "prepared_guided_demo",
+  "modelRequestCount": 0,
+  "turns": [
+    {
+      "question": "现在11:30，下午要在富士山附近步行拍照两小时，14:30才能再吃东西。想买饭团和茶，怎样选才不只看低热量？",
+      "answer": "示例回答：先看看三文鱼饭团和大麦茶，作为主食与饮品的起点。真正要留意的是用餐间隔和后面的活动：你要到14:30才能再吃，不能因为搭配看起来清淡，就认定分量一定适合。饭团配茶也不等于完整的一餐；可按自己的食量补足食物或准备加餐。下面的数值只用于比较项目方案，不是你的个人能量需求。",
+      "products": [
+        {
+          "id": "chilled:1_06",
+          "name": "Salmon rice ball"
+        },
+        {
+          "id": "drinks:BARLEY_TEA",
+          "name": "Barley Tea"
+        }
+      ]
+    },
+    {
+      "question": "保留饭团和茶，再加一份水果。我没有保冷袋，剩下的能带着走两小时再吃吗？",
+      "answer": "示例回答：保留饭团和大麦茶，增加混合水果杯。水果增加了食物种类，但不代表蛋白质或整餐分量已经合适。还有一个比搭配更容易忽略的条件：水果杯和这里的饭团都标为冷藏。没有保冷条件时，不建议把它们放在包里走两小时后再吃；可在店里先吃，或按包装要求保冷携带。",
+      "products": [
+        {
+          "id": "chilled:1_06",
+          "name": "Salmon rice ball"
+        },
+        {
+          "id": "drinks:BARLEY_TEA",
+          "name": "Barley Tea"
+        },
+        {
+          "id": "chilled:4_06",
+          "name": "Mixed fruit cup"
+        }
+      ]
+    },
+    {
+      "question": "那我现在吃完再出发。把水果换成酸奶，饭团和茶不变，营养上有什么取舍？",
+      "answer": "示例回答：已把水果杯换成明治保加利亚酸奶，饭团和大麦茶保留。按项目虚拟资料，替换后蛋白质合计增加4g，能量增加32 kcal；这不是“热量越低越好”的选择。你增加了乳制品、减少了水果种类，不代表酸奶在所有方面都更好。现在吃完更符合这次没有保冷袋的安排；也要确认乳制品是否适合自己。最终分量仍应结合食欲和下一次进食时间调整。",
+      "products": [
+        {
+          "id": "chilled:1_06",
+          "name": "Salmon rice ball"
+        },
+        {
+          "id": "drinks:BARLEY_TEA",
+          "name": "Barley Tea"
+        },
+        {
+          "id": "chilled:5_06",
+          "name": "Meiji Bulgaria yogurt"
+        }
+      ]
+    }
+  ],
+  "simulatedTotals": [
+    {
+      "kcal": 182,
+      "protein_g": 5
+    },
+    {
+      "kcal": 266,
+      "protein_g": 6
+    },
+    {
+      "kcal": 298,
+      "protein_g": 10
+    }
+  ],
+  "swapDelta": {
+    "kcal": 32,
+    "protein_g": 4
+  },
+  "scenario": {
+    "exampleMealTime": "11:30",
+    "nextMeal": "14:30",
+    "activityMinutes": 120,
+    "coldBag": false
+  },
+  "sources": [
+    "https://www.fda.gov/food/buy-store-serve-safe-food/handling-food-safely-while-eating-outdoors",
+    "https://www.myplate.gov/web/eat-healthy/dairy"
+  ],
+  "scope": "Prepared Q&A; project virtual nutrition; no live model calls during recording; no personal energy or verified package assessment.",
+  "timeline": [
+    {
+      "key": "cover-ready",
+      "start": 0,
+      "duration": 4,
+      "label": "富士山野餐：让搭配有理由",
+      "labelEn": "A picnic by Fuji: choices with reasons."
+    },
+    {
+      "key": "enter",
+      "start": 4,
+      "duration": 4,
+      "label": "从第一人称走进便利店，开始三轮预设问答",
+      "labelEn": "Enter the store. This walkthrough uses prepared Q&A."
+    },
+    {
+      "key": "v2-question-1",
+      "start": 8,
+      "duration": 5,
+      "label": "11:30用餐、两小时步行、14:30才能再吃：该考虑什么？",
+      "labelEn": "11:30 lunch, a two-hour walk, next meal at 14:30: what matters?"
+    },
+    {
+      "key": "v2-answer-1-reason",
+      "start": 13,
+      "duration": 11,
+      "label": "先看用餐间隔与活动安排，不能只凭“清淡”判断够不够",
+      "labelEn": "Consider meal timing and activity; lighter does not mean sufficient."
+    },
+    {
+      "key": "v2-answer-1-metrics",
+      "start": 24,
+      "duration": 6,
+      "label": "代码合计项目虚拟资料：182 kcal、5 g蛋白质",
+      "labelEn": "Code totals simulated data: 182 kcal and 5 g protein."
+    },
+    {
+      "key": "v2-followup-2",
+      "start": 30,
+      "duration": 5,
+      "label": "追问：保留饭团和茶，加水果；没有保冷袋怎么办？",
+      "labelEn": "Keep the rice ball and tea; add fruit. What if there is no cooler bag?"
+    },
+    {
+      "key": "v2-answer-2-reason",
+      "start": 35,
+      "duration": 12,
+      "label": "识别容易忽略的冷藏条件，调整“带走”还是“现在吃”",
+      "labelEn": "Notice cold-storage needs and reconsider carrying food versus eating now."
+    },
+    {
+      "key": "v2-answer-2-metrics",
+      "start": 47,
+      "duration": 6,
+      "label": "水果增加食物种类，合计266 kcal、6 g蛋白质",
+      "labelEn": "Fruit adds variety. Simulated total: 266 kcal and 6 g protein."
+    },
+    {
+      "key": "v2-followup-3",
+      "start": 53,
+      "duration": 5,
+      "label": "再次追问：现在吃完，把水果换酸奶，其余保留",
+      "labelEn": "Eat now, replace fruit with yogurt and keep the other items."
+    },
+    {
+      "key": "v2-answer-3-reason",
+      "start": 58,
+      "duration": 12,
+      "label": "解释取舍：增加乳制品，同时减少水果种类",
+      "labelEn": "Explain the trade-off: more dairy, less fruit variety."
+    },
+    {
+      "key": "v2-answer-3-metrics",
+      "start": 70,
+      "duration": 7,
+      "label": "替换差值由代码计算：+32 kcal、+4 g蛋白质",
+      "labelEn": "Code calculates the simulated swap: +32 kcal and +4 g protein."
+    },
+    {
+      "key": "find-walk-start",
+      "start": 77,
+      "duration": 2,
+      "label": "点击酸奶商品的 Find，开始店内导航",
+      "labelEn": "Click Find on yogurt to start in-store navigation."
+    },
+    {
+      "key": "find-walk",
+      "start": 79,
+      "duration": 12,
+      "label": "真实网页沿A*路径前往冷食柜",
+      "labelEn": "The actual webpage follows the A* route to the chilled cabinet."
+    },
+    {
+      "key": "arrival",
+      "start": 91,
+      "duration": 3,
+      "label": "到达酸奶所在货架，商品ID与场景标记对应",
+      "labelEn": "Arrive at the yogurt shelf; the catalog ID maps to the scene marker."
+    },
+    {
+      "key": "added",
+      "start": 94,
+      "duration": 3,
+      "label": "把最终三件商品加入购物篮",
+      "labelEn": "Add the final three items to the basket."
+    },
+    {
+      "key": "basket",
+      "start": 97,
+      "duration": 6,
+      "label": "购物篮：三文鱼饭团、大麦茶、酸奶，各一份",
+      "labelEn": "Basket: one salmon rice ball, one barley tea and one yogurt."
+    },
+    {
+      "key": "final-review",
+      "start": 103,
+      "duration": 4,
+      "label": "从提问、取舍到找货和选品，形成完整流程",
+      "labelEn": "A complete flow from questions and trade-offs to finding and choosing."
+    }
+  ]
+}

@@ -126,8 +126,3 @@
   Fuji.clerk=api;if(Fuji.enhanceClerkCatalog)Fuji.enhanceClerkCatalog(api,ctx,{stopWalking,addProduct});if(new URLSearchParams(location.search).get('show')==='clerk')open();return api;
  };
 })();
-
-
-
-
-

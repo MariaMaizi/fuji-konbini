@@ -17,4 +17,3 @@ Fuji.loadProductCatalog=async function(world){
  Fuji.catalog=data;FujiClerkEngine.configure(data);
  return data;
 };
-

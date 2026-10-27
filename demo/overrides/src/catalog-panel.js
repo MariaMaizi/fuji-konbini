@@ -76,4 +76,3 @@
   api.catalogValidation=Fuji.catalog.validation;
  };
 })();
-

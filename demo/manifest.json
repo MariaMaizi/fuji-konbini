@@ -7,18 +7,21 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 5307,
-      "sha256": "d9c74080b8302c471f6854397c50ce1ca31e0a5f36a6d2ba5704193dbfa32bad"
+      "bytes": 5177,
+      "sha256": "2439e4736b8939dda6b1a9bc6e2b0f6dee527c16043df1d8dfdf57b7d9418259",
+      "hashNormalization": "LF"
     },
     {
       "path": "data/product-catalog.json",
       "bytes": 473930,
-      "sha256": "369f3223c03cd082c4383b6dadcde2dae95e36d822c8562bf6afbf23c89d825a"
+      "sha256": "369f3223c03cd082c4383b6dadcde2dae95e36d822c8562bf6afbf23c89d825a",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/chat-compact.css",
       "bytes": 2266,
-      "sha256": "52a239c04fd9cbdc1745d886507fbc5571756d3f9c489d043dbd12a16ae21d2a"
+      "sha256": "52a239c04fd9cbdc1745d886507fbc5571756d3f9c489d043dbd12a16ae21d2a",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/cover.jpg",
@@ -27,18 +30,21 @@
     },
     {
       "path": "demo/demo-client.js",
-      "bytes": 5555,
-      "sha256": "d0f52618d8d1a5fa163b487677f84461064c135ec868ad378f5e10069a7a575c"
+      "bytes": 5514,
+      "sha256": "4efbca48cfb8105628ca87cc57286fc8aa228b6c5190087266c3c9cb448e774d",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/demo-guide.js",
-      "bytes": 5631,
-      "sha256": "c77ec3cbd936c6573ce37133423ca8b8ba5570b0812bec5b4aaa02c8168f4626"
+      "bytes": 5589,
+      "sha256": "48e56bac17bf333b0e4bad2fef89cdce4619f527e122689b5ccd5bd88da879cc",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/demo.css",
       "bytes": 3981,
-      "sha256": "7c271aa4fea03c28e0d7fd0db1b458b018b91389c48e1adce2e3b86909c670d9"
+      "sha256": "7c271aa4fea03c28e0d7fd0db1b458b018b91389c48e1adce2e3b86909c670d9",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/fuji-konbini-picnic-demo.mp4",
@@ -47,8 +53,9 @@
     },
     {
       "path": "demo/picnic-evidence.js",
-      "bytes": 1791,
-      "sha256": "847bec4da84e401a81781e15b0a26aae4ecc4630fbd62f7c4e39077d77e8b98d"
+      "bytes": 1790,
+      "sha256": "11541202ea86d07f325181b37ac6de6ca31fa3109d2db5a6170fd9fbad6c5560",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/picnic-poster.jpg",
@@ -57,53 +64,63 @@
     },
     {
       "path": "demo/picnic-session.json",
-      "bytes": 7748,
-      "sha256": "b5ed2135ae277aac9a30c31030ea7cd8d682e9a37372d283c9c52261017fc29c"
+      "bytes": 7539,
+      "sha256": "b222e327bb44dc8c4295cf5836d7b5b6e379c32fdd7508b602a0c30ea3050159",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/scenarios.js",
-      "bytes": 14761,
-      "sha256": "da26094874d3d257a0fd106a9cdf39c65d52d5f9624ee932d24b7ef4644a8bfe"
+      "bytes": 14688,
+      "sha256": "596dd9ddb2d5e971ea0455bcaf435f233c73b7b825a47f535ddeaa5a4d65d6cb",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/watch.css",
       "bytes": 2170,
-      "sha256": "c032bbf034a0b8ef3aac654a4128fb3fd6aefe7cf8ef6618710d5044fe3b60d4"
+      "sha256": "c032bbf034a0b8ef3aac654a4128fb3fd6aefe7cf8ef6618710d5044fe3b60d4",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/watch.html",
       "bytes": 2872,
-      "sha256": "52e0847ba31f202fd9d2c9180c3e8d9ddc94aa386edc47c2211f18f08c0bde9e"
+      "sha256": "52e0847ba31f202fd9d2c9180c3e8d9ddc94aa386edc47c2211f18f08c0bde9e",
+      "hashNormalization": "LF"
     },
     {
       "path": "demo/watch.js",
       "bytes": 3935,
-      "sha256": "ad291c18ba37fcad4af3144a501addbf8d9e795326830a44c9c770598c616345"
+      "sha256": "ad291c18ba37fcad4af3144a501addbf8d9e795326830a44c9c770598c616345",
+      "hashNormalization": "LF"
     },
     {
       "path": "src/catalog-panel.js",
-      "bytes": 8425,
-      "sha256": "4fc780445c0ae9359984b14476acbb9f8c58934d0a74451debfda0cdd42c1f5b"
+      "bytes": 8345,
+      "sha256": "94a4b6ed923f82f63218adaa3a746062fbb11cfd399a9a94d2fb4cc2cd6feb2d",
+      "hashNormalization": "LF"
     },
     {
       "path": "src/clerk-ui.css",
-      "bytes": 30823,
-      "sha256": "b7ae558a870a8055e2029e613e9635e1f379a6e11a92488261263116a8a7de9f"
+      "bytes": 30629,
+      "sha256": "3138cb4993543072bfdbc8a0946847be00ecd08e208de3b820062383d307ac81",
+      "hashNormalization": "LF"
     },
     {
       "path": "src/clerk-ui.js",
-      "bytes": 26594,
-      "sha256": "710a21f15b2fa03b1be3b66f9b0296a632f098eb349280e15f1a8c8367c7b87f"
+      "bytes": 26456,
+      "sha256": "39bea39089d475241b882fb799e5d27c2877c7467229f82427fc7bda94ae9d5e",
+      "hashNormalization": "LF"
     },
     {
       "path": "src/product-catalog.js",
-      "bytes": 1029,
-      "sha256": "b429dddb14a299bb2da523cd7f0e055d3f2e0b1be96c509115075d26eb0b1056"
+      "bytes": 1008,
+      "sha256": "b63ba96ab38a6e6952c81502d564bb2bf5238480ef64de1d562d003d6bd75c2e",
+      "hashNormalization": "LF"
     },
     {
       "path": "assets/audio/CREDITS.md",
       "bytes": 799,
-      "sha256": "6384ea94ba7df07bed7041a64a693ff2fa43047aa452f29e358558c2a5f6dc59"
+      "sha256": "6384ea94ba7df07bed7041a64a693ff2fa43047aa452f29e358558c2a5f6dc59",
+      "hashNormalization": "LF"
     },
     {
       "path": "assets/products/chilled--1_01.png",
@@ -1045,5 +1062,6 @@
       "bytes": 61835,
       "sha256": "8e1d11a3c826e1011dd375b4b6c620796a01458d95e011502d38021880d70606"
     }
-  ]
+  ],
+  "textHashNormalization": "UTF-8 with LF line endings; binary files use original bytes"
 }

@@ -11,7 +11,9 @@ const manifest = JSON.parse(fs.readFileSync(path.join(root, 'demo', 'manifest.js
 for (const file of manifest.files) {
   const source = path.resolve(overlay, file.path);
   if (!source.startsWith(overlay + path.sep)) throw Error('Overlay path leaves its directory');
-  const digest = crypto.createHash('sha256').update(fs.readFileSync(source)).digest('hex');
+  const bytes = fs.readFileSync(source);
+  const canonical = file.hashNormalization === 'LF' ? Buffer.from(bytes.toString('utf8').replace(/\r\n/g, '\n')) : bytes;
+  const digest = crypto.createHash('sha256').update(canonical).digest('hex');
   if (digest !== file.sha256) throw Error('Overlay changed; update demo/manifest.json: ' + file.path);
 }
 fs.mkdirSync(out, { recursive: true });
